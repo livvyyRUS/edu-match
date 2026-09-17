@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduMatch — План поступления в вузы 2027</title>
+
+  <!-- Шрифты Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/roadmap.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 2 8.5l10 5.5 10-5.5L12 3z" fill="currentColor" stroke="none"/>
+            <path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/>
+          </svg>
+        </span>
+        <span class="logo-text">Edu<span>Match</span></span>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="programs.html">Программы</a></li>
+          <li><a href="roadmap.html" class="active">План</a></li>
+          <li><a href="assistant.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <span class="status-pill">
+          <span class="dot ok" id="statusDot"></span>
+          <span id="statusText"><span class="js-program-count">104</span> программы</span>
+        </span>
+        <span class="version-pill">v1.0 · 2027</span>
+        <button class="theme-btn" id="themeToggle" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="programs.html">Каталог программ</a></li>
+      <li><a href="roadmap.html" class="active">План</a></li>
+      <li><a href="assistant.html">Подбор программы</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge" id="deadlineCountdown">Приёмная кампания 2027</div>
+      <h1 class="hero-title">
+        План поступления<br>
+        <span class="accent">поступления в университеты 2027</span>
+      </h1>
+      <p class="hero-sub">
+        Пошаговые маршруты от выбора экзаменов до приказа о зачислении. Отмечайте пройденные этапы, следите за дедлайнами и избегайте типичных ошибок абитуриентов.
+      </p>
+      <div class="hero-facts">
+        <span class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg>
+          4 образовательных трека
+        </span>
+        <span class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg>
+          Календарь дат лета 2027
+        </span>
+        <span class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg>
+          Чеклист обязательных документов
+        </span>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- ============================================================
+       ROADMAP CONTENT
+       ============================================================ -->
+  <main class="container" style="position: relative; z-index: 10; margin-top: -30px;">
+
+    <!-- Переключатель треков -->
+    <div class="roadmap-tabs-container">
+      <button type="button" class="roadmap-tab-btn active" data-track="ege">
+        <span class="tab-num">01</span>
+        <span>Трек ЕГЭ (Классический)</span>
+      </button>
+      <button type="button" class="roadmap-tab-btn" data-track="olympiad">
+        <span class="tab-num">02</span>
+        <span>Олимпиадный трек (БВИ)</span>
+      </button>
+      <button type="button" class="roadmap-tab-btn" data-track="grant">
+        <span class="tab-num">03</span>
+        <span>Грантовый трек</span>
+      </button>
+      <button type="button" class="roadmap-tab-btn" data-track="target">
+        <span class="tab-num">04</span>
+        <span>Целевое обучение</span>
+      </button>
+    </div>
+
+    <!-- Карточка обзора выбранного трека -->
+    <div class="track-overview">
+      <div class="track-overview-header">
+        <div>
+          <span class="hero-badge" id="trackBadge" style="margin-bottom: 8px;">Маршрут</span>
+          <h2 class="track-overview-title" id="trackTitle">Трек ЕГЭ — Классический путь</h2>
+          <p class="track-overview-desc" id="trackDesc">Поступление по общему конкурсу суммы баллов трёх или четырёх предметов ЕГЭ.</p>
+        </div>
+      </div>
+
+      <!-- Ключевые показатели трека -->
+      <div class="stats-row" id="trackStatsGrid" style="margin-bottom: 0;"></div>
+
+      <!-- Прогресс прохождения этапов -->
+      <div class="track-progress-card">
+        <div class="track-progress-header">
+          <span>Ваш прогресс по треку</span>
+          <span id="trackProgressText">0 из 0 задач</span>
+        </div>
+        <div class="track-progress-bar">
+          <div class="track-progress-fill" id="trackProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Этапы трека (Таймлайн) -->
+    <div class="timeline-list" id="timelineContainer">
+      <!-- Генерируется из js/roadmap.js -->
+    </div>
+
+    <!-- Календарь ключевых дат кампании 2027 -->
+    <section class="calendar-section">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="section-badge">Сроки и дедлайны</span>
+        <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px;">Календарь абитуриента 2027 года</h2>
+        <p style="color: var(--text-2); font-size: 15px;">Указаны <strong>примерные даты</strong> приёмной кампании 2027 — точный график будет утверждён приказом Минобрнауки РФ и опубликован на сайтах вузов</p>
+      </div>
+
+      <div class="calendar-grid">
+        <div class="calendar-card">
+          <div class="calendar-date">20 июня 2027</div>
+          <div class="calendar-event">Старт приёма документов</div>
+          <div class="calendar-desc">Открытие приёма заявлений через Госуслуги, сайты вузов и лично в приёмных комиссиях.</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">7 – 20 июля 2027</div>
+          <div class="calendar-event">ДВИ и творческие экзамены</div>
+          <div class="calendar-desc">Окончание приёма заявлений для сдающих дополнительные вступительные испытания (ДВИ).</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">25 июля 2027</div>
+          <div class="calendar-event">Финал приёма по ЕГЭ</div>
+          <div class="calendar-desc">В 18:00 по местному времени завершается приём документов на бюджет по результатам ЕГЭ.</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">27 июля 2027</div>
+          <div class="calendar-event">Публикация списков</div>
+          <div class="calendar-desc">Университеты публикуют рейтинговые конкурсные списки без ФИО по номерам СНИЛС.</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">28 июля 2027</div>
+          <div class="calendar-event">Оригиналы: БВИ и льготы</div>
+          <div class="calendar-desc">Крайний срок подачи оригинала аттестата для поступающих без экзаменов (БВИ) и по квотам.</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">29 – 30 июля 2027</div>
+          <div class="calendar-event">Приказы: Приоритетный этап</div>
+          <div class="calendar-desc">Публикация официальных приказов о зачислении олимпиадников, целевиков и особой квоты.</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">3 августа 2027</div>
+          <div class="calendar-event">Оригиналы: Основной этап (12:00 МСК)</div>
+          <div class="calendar-desc">Самый важный дедлайн: окончание приёма согласий и оригиналов на основные бюджетные места!</div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-date">7 – 9 августа 2027</div>
+          <div class="calendar-event">Приказы основного этапа</div>
+          <div class="calendar-desc">Издание приказов о зачислении 100% оставшихся бюджетных мест общего конкурса.</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; display: flex; align-items: flex-start; gap: 12px; padding: 15px 18px; border-radius: var(--r-md); background: var(--warn-soft); border: 1.5px dashed rgba(244, 163, 0, .4); color: var(--text-2); font-size: 13.5px; line-height: 1.55;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--warn)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px;">
+          <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/>
+          <path d="M12 9v4"/><path d="M12 17h.01"/>
+        </svg>
+        <span><strong style="color: var(--text);">Все даты в календаре — примерные.</strong> Окончательное расписание приёмной кампании 2027 будет утверждено приказом Минобрнауки России и может немного отличаться. Обязательно сверяйте сроки с официальными правилами приёма конкретных вузов и информацией на Госуслугах.</span>
+      </div>
+    </section>
+
+    <!-- Чеклист обязательных документов -->
+    <section class="calendar-section" style="margin-bottom: 72px;">
+      <div style="margin-bottom: 24px;">
+        <span class="section-badge">Документы</span>
+        <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px;">Пакет документов для поступления</h2>
+        <p style="color: var(--text-2); font-size: 15px;">Подготовьте заранее сканы и оригиналы следующих документов:</p>
+      </div>
+
+      <div class="checklist">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Паспорт гражданина РФ</strong> (разворот с фото и страница с регистрацией)</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>СНИЛС</strong> (страховой номер обязателен для формирования конкурсных списков)</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Аттестат о среднем общем образовании</strong> (с приложением оценок)</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Медицинская справка 086/у</strong> (обязательна для медицинских, транспортных и инженерных вузов)</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Подтверждения индивидуальных достижений:</strong> аттестат с отличием, знак ГТО, волонтёрская книжка, дипломы олимпиад</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>4–6 фотографий формата 3×4</strong> (матовая бумага, для личного дела и студбилета)</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Приписное свидетельство / военный билет</strong> (для юношей старше 17 лет)</span>
+        </label>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3 2 8.5l10 5.5 10-5.5L12 3z" fill="currentColor" stroke="none"/>
+              <path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/>
+            </svg>
+          </span>
+          <span class="logo-text">Edu<span>Match</span></span>
+        </a>
+        <p class="footer-desc">
+          Единая информационная система для абитуриентов 2027 года. Подбор программ бакалавриата, калькулятор баллов ЕГЭ и пошаговый план поступления.
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="programs.html">Каталог программ</a></li>
+        <li><a href="roadmap.html">План 2027</a></li>
+        <li><a href="assistant.html">Подбор программы</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2027 <strong>EduMatch</strong>. Все данные актуализированы по правилам приёма 2027.</div>
+      <div>База данных: 104 специальности · НИУ ВШЭ, МФТИ, МГТУ им. Баумана, ННГУ, НГТУ, НГЛУ, ПИМУ</div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/roadmap.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+.roadmap-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0 60px 0;
+}
+
+.background-patterns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.25) 0%, transparent 40%),
+    repeating-linear-gradient(-45deg, rgba(99, 102, 241, 0.05) 0px, rgba(99, 102, 241, 0.05) 2px, transparent 2px, transparent 16px);
+}
+
+.roadmap-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.graffiti-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.graffiti-title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  display: inline-block;
+  transform: rotate(-3deg) skewX(-6deg);
+  color: #ffffff;
+  text-shadow:
+    2px 2px 0px var(--primary),
+    4px 4px 0px #4338ca,
+    6px 6px 0px var(--secondary),
+    8px 8px 0px #0891b2,
+    10px 10px 0px #0f172a,
+    12px 12px 25px rgba(0, 0, 0, 0.7);
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.graffiti-title:hover {
+  transform: rotate(-1deg) skewX(-2deg) scale(1.02);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.track-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.track-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.track-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.track-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondary);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.track-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.track-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.track-card .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .graffiti-title {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+}
+
+
+[
+  {
+    "id": 1,
+    "code": "09.03.01",
+    "title": "Информатика и вычислительная техника",
+    "description": "Разработка программного обеспечения, проектирование баз данных, алгоритмы и архитектура вычислительных систем.
+ТОЛЬКО ТУТ ПРЯМ ПОДРОБНАЯ ИНФА",
+    "ege": ["math", "cs", "physics"],
+    "minScore": 245,
+    "budgetPlaces": 120,
+    "direction": "it",
+    "form": "fulltime"
+  },

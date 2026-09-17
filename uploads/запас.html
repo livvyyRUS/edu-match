@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Помощник Абитуриента — ИИ Помощник</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/assistant.css">
+</head>
+<body>
+
+  <header id="header-placeholder"></header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Умный помощник поступления</h1>
+      <p>Ответьте на несколько вопросов, и ИИ поможет подобрать подходящие специальности и вузы на основе ваших баллов и интересов.</p>
+    </section>
+
+    <section class="assistant-chat-container">
+      <div class="chat-window" id="chat-window">
+        <div class="chat-message bot">
+          <div class="message-avatar">AI</div>
+          <div class="message-content">
+            Привет! Я твой персональный консультант по поступлению. Задай мне вопрос или расскажи о своих баллах ЕГЭ, любимых предметах и желаемом городе, а я подберу подходящие направления!
+          </div>
+        </div>
+      </div>
+
+      <form class="chat-input-form" id="chat-form">
+        <input type="text" id="user-input" placeholder="Напишите ваши баллы, интересы или вопрос..." autocomplete="off">
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+    </section>
+
+    <section class="faq-section">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="faq-item">
+        <h3>Как ИИ подбирает специальности?</h3>
+        <p>Алгоритм анализирует суммарный балл ЕГЭ, сопоставляет его с проходными баллами прошлых лет и учитывает ваши предпочтения по городам и направлениям подготовки.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Учитываются ли индивидуальные достижения?</h3>
+        <p>Да, вы можете указать наличие золотой медали, значка ГТО, волонтёрской книжки или дипломов олимпиад при общении с помощником.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Помощник Абитуриента. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+/* ============================================================
+   EduMatch — Programs Catalog CSS
+   Styled in accordance with assistant.html design system
+   ============================================================ */
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+
+.filters-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: var(--sh-md);
+  position: sticky;
+  top: 84px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) transparent;
+}
+
+.filters-panel::-webkit-scrollbar {
+  width: 6px;
+}
+.filters-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filters-panel::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  border-radius: 999px;
+}
+.filters-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.filters-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.reset-filters-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--r-sm);
+  transition: var(--transition);
+}
+
+.reset-filters-btn:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.filter-group {
+  margin-bottom: 22px;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-2);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-badge-counter {
+  font-size: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 2px 7px;
+  border-radius: var(--r-pill);
+}
+
+/* Subject selection chips */
+.subject-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.subject-chip {
+  cursor: pointer;
+  user-select: none;
+}
+
+.subject-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.subject-chip span {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: var(--transition);
+}
+
+.subject-chip:hover span {
+  background: var(--bg-soft-2);
+  color: var(--text);
+  border-color: var(--line-2);
+}
+
+.subject-chip input:checked + span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 8px var(--accent-glow);
+  font-weight: 600;
+}
+
+/* Catalog Main Content */
+.catalog-topbar {
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: var(--sh-sm);
+}
+
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  width: 17px;
+  height: 17px;
+  pointer-events: none;
+}
+
+.search-input-wrap input {
+  padding-left: 40px;
+}
+
+.catalog-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.catalog-sort-wrap label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.catalog-sort-wrap select {
+  width: auto;
+  min-width: 190px;
+  padding: 8px 30px 8px 12px;
+  font-size: 13px;
+}
+
+.active-filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.active-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: var(--r-pill);
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.active-filter-pill button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.catalog-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+
+.catalog-count-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.catalog-count-text strong {
+  color: var(--text);
+}
+
+.fav-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.fav-toggle-btn:hover {
+  background: var(--bg-soft-2);
+  color: var(--text);
+}
+
+.fav-toggle-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* Empty State */
+.empty-state {
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 60px 24px;
+  text-align: center;
+  grid-column: 1 / -1;
+  box-shadow: var(--sh-sm);
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+}
+
+.empty-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.empty-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.empty-desc {
+  font-size: 14px;
+  color: var(--text-2);
+  max-width: 420px;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 1024px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+  .filters-panel {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}

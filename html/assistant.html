@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EduMatch — подбор образовательных программ 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     THEME VARIABLES
+     ============================================================ */
+  :root {
+    --bg: #f8f9fb;
+    --bg-soft: #f1f2f6;
+    --bg-soft-2: #e5e7ef;
+    --panel-bg: #ffffff;
+    --text: #1c1c1e;
+    --text-2: #5c5c62;
+    --muted: #8e8e93;
+    --line: #e9e9ee;
+    --line-2: #dcdce2;
+
+    --accent: #fc3f1d;
+    --accent-hover: #e5330f;
+    --accent-soft: rgba(252, 63, 29, 0.08);
+
+    --good: #0f9d58;
+    --warn: #f4a300;
+    --bad: #e5352b;
+
+    --r-lg: 24px;
+    --r-md: 16px;
+    --r-sm: 12px;
+
+    --sh-sm: 0 1px 2px rgba(0,0,0,.03), 0 2px 8px rgba(0,0,0,.04);
+    --sh-md: 0 4px 12px rgba(0,0,0,.05), 0 12px 32px rgba(0,0,0,.05);
+    --sh-lg: 0 8px 24px rgba(0,0,0,.07), 0 24px 64px rgba(0,0,0,.07);
+  }
+
+  [data-theme="dark"] {
+    --bg: #121214;
+    --bg-soft: #1c1c1f;
+    --bg-soft-2: #26262b;
+    --panel-bg: #1c1c1f;
+    --text: #f5f5f7;
+    --text-2: #a1a1a8;
+    --muted: #6e6e73;
+    --line: #2c2c31;
+    --line-2: #3a3a40;
+
+    --accent: #ff5c3d;
+    --accent-hover: #ff7a61;
+    --accent-soft: rgba(255, 92, 61, 0.12);
+
+    --good: #34c759;
+    --warn: #ff9f0a;
+    --bad: #ff453a;
+
+    --sh-sm: 0 1px 2px rgba(0,0,0,.2), 0 2px 8px rgba(0,0,0,.2);
+    --sh-md: 0 4px 12px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.3);
+    --sh-lg: 0 8px 24px rgba(0,0,0,.4), 0 24px 64px rgba(0,0,0,.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    transition: background .3s ease, color .3s ease;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  button, input, select { font-family: inherit; }
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    border-bottom: 1px solid var(--line);
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  [data-theme="dark"] .header {
+    background: rgba(18, 18, 20, .85);
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+  }
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, var(--accent), #ff7a45);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(252,63,29,.22);
+    flex-shrink: 0;
+    transition: transform .2s ease;
+  }
+  .logo:hover .logo-mark {
+    transform: scale(1.05) rotate(-3deg);
+  }
+  .logo-mark svg { width: 20px; height: 20px; }
+  .logo-text {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+  }
+  .logo-text span { color: var(--accent); }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: var(--bg-soft);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text-2);
+    white-space: nowrap;
+    transition: background .3s ease, color .3s ease;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--muted);
+    flex-shrink: 0;
+    transition: background .2s, box-shadow .2s;
+  }
+  .dot.ok  { background: var(--good); box-shadow: 0 0 0 3px rgba(15,157,88,.16); }
+  .dot.err { background: var(--bad);  box-shadow: 0 0 0 3px rgba(229,53,43,.16); }
+
+  .version-pill {
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: var(--bg-soft);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-2);
+    white-space: nowrap;
+    transition: background .3s ease, color .3s ease;
+  }
+
+  /* ---- Theme Toggle ---- */
+  .theme-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    color: var(--text-2);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background .2s, color .2s, transform .2s, border-color .2s;
+    flex-shrink: 0;
+  }
+  .theme-btn:hover {
+    background: var(--bg-soft-2);
+    color: var(--text);
+    transform: scale(1.05);
+  }
+  .theme-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: opacity .3s, transform .3s;
+  }
+  .theme-btn .icon-sun { display: none; }
+  .theme-btn .icon-moon { display: block; }
+  [data-theme="dark"] .theme-btn .icon-sun { display: block; }
+  [data-theme="dark"] .theme-btn .icon-moon { display: none; }
+
+  /* ---- Main Nav (unified with style.css) ---- */
+  .main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+  }
+  .main-nav a {
+    color: var(--text-2);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 999px;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .main-nav a:hover {
+    color: var(--text);
+    background: var(--bg-soft);
+  }
+  .main-nav a.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+    font-weight: 600;
+  }
+  .mobile-menu-btn {
+    display: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    color: var(--text);
+    cursor: pointer;
+    place-items: center;
+  }
+  .mobile-menu-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-nav-drawer {
+    display: none;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: var(--panel-bg);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 24px 24px;
+    box-shadow: var(--sh-lg);
+    z-index: 999;
+  }
+  .mobile-nav-drawer.open {
+    display: block;
+  }
+  .mobile-nav-drawer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mobile-nav-drawer a {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--text-2);
+  }
+  .mobile-nav-drawer a.active,
+  .mobile-nav-drawer a:hover {
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+  @media (max-width: 768px) {
+    .main-nav { display: none; }
+    .mobile-menu-btn { display: grid; }
+  }
+
+  /* ============================================================
+     HERO (with smooth gradient fade)
+     ============================================================ */
+  .hero {
+    position: relative;
+    /* The gradient goes from slightly lifted background to base bg */
+    background: linear-gradient(180deg,
+      var(--bg) 0%,
+      var(--bg) 60%,
+      var(--bg-soft) 100%
+    );
+    /* Add extra bottom padding so the fade has room to breathe */
+    padding: 72px 0 96px;
+    overflow: hidden;
+    transition: background .3s ease;
+  }
+
+  /* Soft radial glows that bleed into the next section */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -160px; right: -120px;
+    width: 560px; height: 560px;
+    background: radial-gradient(circle, var(--accent-soft), transparent 68%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -180px; left: -160px;
+    width: 560px; height: 560px;
+    background: radial-gradient(circle, rgba(120,140,255,.10), transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* The fade-out layer that softens the very bottom edge */
+  .hero-fade {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 140px;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      var(--bg) 70%,
+      var(--bg) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 780px;
+    /* Center the inner container within the full-width hero */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* Re-center hero-inner inside max-width 1200 wrapper */
+  .hero > .hero-inner {
+    max-width: 1200px;
+    padding: 0 24px;
+  }
+  .hero-inner > * {
+    max-width: 780px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px 7px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero-badge::before {
+    content: "";
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-left: 3px;
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 5.2vw, 58px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: var(--text);
+    margin-bottom: 22px;
+  }
+  .hero-title .accent { color: var(--accent); }
+
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-2);
+    max-width: 620px;
+    margin-bottom: 26px;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 700; }
+
+  .hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .fact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--panel-bg);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-2);
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .fact svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; }
+
+  /* ============================================================
+     LAYOUT
+     ============================================================ */
+  .layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 72px;
+    display: grid;
+    grid-template-columns: 396px 1fr;
+    gap: 28px;
+    align-items: start;
+    position: relative;
+    z-index: 10;
+    /* Slight upward pull so the panel sits on the soft gradient */
+    margin-top: -56px;
+  }
+
+  /* ============================================================
+     PANEL
+     ============================================================ */
+  .panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 24px;
+    box-shadow: var(--sh-md);
+    position: sticky;
+    top: 84px;
+    align-self: start;
+    transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .panel-title {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .panel-step {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
+
+  .field { margin-bottom: 20px; }
+  .field:last-of-type { margin-bottom: 0; }
+
+  .field-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 11px;
+  }
+  .field-label .num {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--bg-soft);
+    color: var(--text-2);
+    font-size: 11px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    transition: background .3s ease, color .3s ease;
+  }
+
+  /* ---- Inputs ---- */
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--bg-soft);
+    border: 1.5px solid transparent;
+    border-radius: var(--r-sm);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    transition: background .2s, border-color .2s, box-shadow .2s, color .2s;
+  }
+  input[type="text"]:hover,
+  input[type="number"]:hover,
+  select:hover { background-color: var(--bg-soft-2); }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    background-color: var(--panel-bg);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  input::placeholder { color: var(--muted); font-weight: 400; }
+
+  /* ---- Select Styling (Dropdown) ---- */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%238e8e93' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M3 4.5 6 7.5 9 4.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  [data-theme="dark"] select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%23a1a1a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M3 4.5 6 7.5 9 4.5'/%3E%3C/svg%3E");
+  }
+  select option {
+    background: var(--panel-bg);
+    color: var(--text);
+    padding: 12px;
+  }
+
+  /* ---- Presets ---- */
+  .presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .preset {
+    padding: 9px 15px;
+    border-radius: 999px;
+    background: var(--bg-soft);
+    border: 1.5px solid transparent;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: all .15s;
+    white-space: nowrap;
+  }
+  .preset:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .preset:active { transform: translateY(0); }
+
+  /* ---- EGE rows ---- */
+  .ege-row {
+    display: grid;
+    grid-template-columns: 1fr 82px 42px;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+  .ege-row select,
+  .ege-row input { height: 46px; }
+  .ege-row input {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    padding-left: 6px;
+    padding-right: 6px;
+    -moz-appearance: textfield;
+  }
+  .ege-row input::-webkit-outer-spin-button,
+  .ege-row input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+  .icon-btn {
+    width: 42px; height: 46px;
+    border-radius: var(--r-sm);
+    background: var(--bg-soft);
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    transition: all .15s;
+  }
+  .icon-btn:hover {
+    background: rgba(229,53,43,.1);
+    color: var(--bad);
+  }
+
+  .add-btn {
+    width: 100%;
+    margin-top: 4px;
+    padding: 11px 14px;
+    border-radius: var(--r-sm);
+    background: transparent;
+    border: 1.5px dashed var(--line-2);
+    color: var(--text-2);
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: all .15s;
+  }
+  .add-btn::before { content: "+"; font-size: 17px; font-weight: 500; line-height: 1; }
+  .add-btn:hover {
+    border-color: var(--accent);
+    border-style: solid;
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  /* ---- Total score banner ---- */
+  .total-score-banner {
+    margin-top: 12px;
+    background: linear-gradient(135deg, var(--accent-soft), rgba(255,122,69,.12));
+    border: 1.5px solid rgba(252,63,29,.25);
+    border-radius: var(--r-md);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .total-score-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .total-score-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  /* ---- Tags ---- */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 9px;
+    background: var(--bg-soft);
+    border: 1.5px solid transparent;
+    border-radius: var(--r-sm);
+    min-height: 46px;
+    transition: background .15s, border-color .15s, box-shadow .15s;
+  }
+  .tags:focus-within {
+    background: var(--panel-bg);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  .tags input {
+    flex: 1;
+    min-width: 110px;
+    padding: 6px 6px;
+    border: none;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    font-size: 13.5px;
+    height: auto;
+    color: var(--text);
+  }
+  .tags input:hover,
+  .tags input:focus { background: transparent; box-shadow: none; border: none; }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 5px 5px 11px;
+    border-radius: 999px;
+    background: var(--panel-bg);
+    border: 1px solid var(--line-2);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text);
+    transition: background .2s, border-color .2s;
+  }
+  .tag button {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    transition: all .12s;
+  }
+  .tag button:hover { background: var(--bad); color: #fff; }
+
+  /* ---- Toggle ---- */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 16px;
+    margin: 4px 0 20px;
+    border-radius: var(--r-md);
+    background: var(--bg-soft);
+    transition: background .3s ease;
+  }
+  .toggle-text {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.35;
+  }
+  .switch {
+    position: relative;
+    width: 48px; height: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .switch input {
+    position: absolute;
+    opacity: 0;
+    width: 100%; height: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .switch .track {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: var(--line-2);
+    transition: background .2s;
+  }
+  .switch .thumb {
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.22);
+    transition: transform .2s cubic-bezier(.4,0,.2,1);
+  }
+  .switch input:checked ~ .track { background: var(--accent); }
+  .switch input:checked ~ .thumb { transform: translateX(20px); }
+  .switch input:focus-visible ~ .track { box-shadow: 0 0 0 4px var(--accent-soft); }
+
+  /* ---- Submit ---- */
+  .btn-primary {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: var(--r-md);
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    transition: background .15s, transform .12s, box-shadow .15s;
+    box-shadow: 0 4px 14px rgba(252,63,29,.28);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(252,63,29,.34);
+  }
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(252,63,29,.28);
+  }
+  .btn-primary:disabled { opacity: .6; cursor: not-allowed; box-shadow: none; }
+
+  .loader {
+    display: inline-block;
+    width: 15px; height: 15px;
+    border: 2px solid rgba(255,255,255,.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+    margin-right: 9px;
+    vertical-align: -3px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ============================================================
+     RESULTS
+     ============================================================ */
+  .results-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .results-head h2 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .results-head .meta {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .results-head .meta:empty { display: none; }
+
+  /* ---- Card ---- */
+  .card {
+    background: var(--panel-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    margin-bottom: 16px;
+    box-shadow: var(--sh-sm);
+    overflow: hidden;
+    transition: box-shadow .22s, transform .22s, border-color .22s, background .3s;
+  }
+  .card:hover {
+    box-shadow: var(--sh-md);
+    transform: translateY(-3px);
+    border-color: var(--line-2);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 24px 0;
+  }
+  .card-main { min-width: 0; flex: 1; }
+
+  .card-num {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .card-sub {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+    color: var(--text-2);
+  }
+  .uni-tag {
+    padding: 4px 11px;
+    border-radius: 999px;
+    background: var(--bg-soft-2);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text);
+    transition: background .3s ease;
+  }
+
+  /* ---- Match ring ---- */
+  .match-wrap {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 96px;
+  }
+  .match-ring {
+    --p: 0;
+    --c: var(--good);
+    position: relative;
+    width: 76px; height: 76px;
+    display: grid;
+    place-items: center;
+  }
+  .match-ring svg {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    transform: rotate(-90deg);
+  }
+  .match-ring circle {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+  }
+  .match-ring .ring-bg { stroke: var(--bg-soft-2); }
+  .match-ring .ring-fg {
+    stroke: var(--c);
+    stroke-dasharray: 201;
+    stroke-dashoffset: calc(201 - 201 * var(--p) / 100);
+    transition: stroke-dashoffset .8s cubic-bezier(.4,0,.2,1);
+  }
+  .match-ring .ring-val {
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .match-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.25;
+    padding: 4px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .match-wrap.good { --c: var(--good); }
+  .match-wrap.warn { --c: var(--warn); }
+  .match-wrap.bad  { --c: var(--bad); }
+  .match-wrap.good .match-label { color: var(--good); background: rgba(15,157,88,.1); }
+  .match-wrap.warn .match-label { color: #b8790a;      background: rgba(244,163,0,.13); }
+  .match-wrap.bad  .match-label { color: var(--bad);  background: rgba(229,53,43,.1); }
+  [data-theme="dark"] .match-wrap.good .match-label { background: rgba(52, 199, 89, .15); }
+  [data-theme="dark"] .match-wrap.warn .match-label { background: rgba(255, 159, 10, .15); color: var(--warn); }
+  [data-theme="dark"] .match-wrap.bad  .match-label { background: rgba(255, 69, 58, .15); }
+
+  /* ---- Description ---- */
+  .desc {
+    padding: 16px 24px 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-2);
+  }
+
+  /* ---- Chips ---- */
+  .chips-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding: 16px 24px 22px;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    background: var(--bg-soft);
+    color: var(--text-2);
+    border: 1px solid transparent;
+    transition: background .3s ease, color .3s ease;
+  }
+  .chip.ok {
+    background: rgba(15,157,88,.1);
+    color: var(--good);
+  }
+  .chip.missing {
+    background: rgba(229,53,43,.09);
+    color: var(--bad);
+    text-decoration: line-through;
+    text-decoration-thickness: 1.3px;
+  }
+  .chip.info {
+    background: var(--bg-soft-2);
+    color: var(--text-2);
+  }
+  [data-theme="dark"] .chip.ok { background: rgba(52, 199, 89, .15); }
+  [data-theme="dark"] .chip.missing { background: rgba(255, 69, 58, .15); }
+
+  .missing-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 24px;
+    background: rgba(229,53,43,.05);
+    border-top: 1px solid rgba(229,53,43,.14);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bad);
+  }
+  [data-theme="dark"] .missing-note { background: rgba(255, 69, 58, .08); }
+  .missing-note::before {
+    content: "!";
+    width: 19px; height: 19px;
+    border-radius: 50%;
+    background: var(--bad);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* ---- Empty ---- */
+  .empty {
+    background: var(--panel-bg);
+    border: 1px dashed var(--line-2);
+    border-radius: var(--r-lg);
+    padding: 56px 36px;
+    text-align: center;
+    color: var(--text-2);
+    font-size: 14.5px;
+    line-height: 1.6;
+    transition: background .3s ease, border-color .3s ease;
+  }
+  .empty-icon {
+    width: 64px; height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--bg-soft);
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    transition: background .3s ease;
+  }
+  .empty-icon svg { width: 26px; height: 26px; }
+  .empty-title {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  /* ---- Error ---- */
+  .error {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 15px 18px;
+    border-radius: var(--r-md);
+    background: rgba(229,53,43,.07);
+    border: 1px solid rgba(229,53,43,.18);
+    color: var(--bad);
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+  [data-theme="dark"] .error { background: rgba(255, 69, 58, .1); }
+  .error::before {
+    content: "!";
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--bad);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .footer {
+    border-top: 1px solid var(--line);
+    background: var(--bg-soft);
+    margin-top: auto;
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-desc {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 380px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 13.5px;
+  }
+  .footer-links a {
+    color: var(--text-2);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer strong { color: var(--text); font-weight: 700; }
+  .footer a { color: var(--text-2); text-decoration: none; font-weight: 500; transition: color .15s; }
+  .footer a:hover { color: var(--accent); }
+
+  /* ============================================================
+     SCROLLBAR
+     ============================================================ */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--line-2);
+    border-radius: 999px;
+    border: 3px solid var(--bg);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width: 1000px) {
+    .layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: -40px;
+    }
+    .panel { position: static; }
+    .hero { padding: 48px 0 80px; }
+    .layout { padding: 0 20px 56px; }
+    .header-inner { padding: 12px 20px; }
+    .hero-inner { padding: 0 20px; }
+  }
+
+  @media (max-width: 700px) {
+    body { font-size: 14px; }
+    .hero { padding: 36px 0 64px; }
+    .hero-fade { height: 100px; }
+    .layout { padding: 0 16px 48px; margin-top: -32px; }
+    .hero-title { font-size: 32px; }
+    .hero-sub { font-size: 15.5px; }
+    .hero-inner { padding: 0 16px; }
+    .header-inner { padding: 10px 16px; }
+    .logo-text { font-size: 16px; }
+    .status-pill span:last-child { display: none; }
+    .status-pill { padding: 7px 10px; }
+    .version-pill { display: none; }
+
+    .panel { padding: 20px 18px; border-radius: var(--r-md); }
+    .card { border-radius: var(--r-md); }
+    .card-top {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 20px 18px 0;
+      gap: 16px;
+    }
+    .card-title { font-size: 18px; }
+    .desc { padding: 14px 18px 4px; }
+    .chips-wrap { padding: 14px 18px 20px; }
+    .missing-note { padding: 12px 18px; }
+
+    .match-wrap {
+      flex-direction: row;
+      align-items: center;
+      width: auto;
+      gap: 12px;
+    }
+    .match-ring { width: 56px; height: 56px; }
+    .match-ring .ring-val { font-size: 14px; }
+    .match-label { font-size: 11px; }
+
+    .results-head h2 { font-size: 21px; }
+    .empty { padding: 40px 22px; }
+
+    .ege-row { grid-template-columns: 1fr 70px 42px; gap: 6px; }
+    .ege-row select { font-size: 13px; padding-left: 10px; padding-right: 30px; }
+
+    .footer-inner {
+      padding: 24px 18px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 18px 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3 2 8.5l10 5.5 10-5.5L12 3z" fill="currentColor" stroke="none"/>
+          <path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/>
+        </svg>
+      </span>
+      <span class="logo-text">Edu<span>Match</span></span>
+    </a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="programs.html">Программы</a></li>
+        <li><a href="roadmap.html">План</a></li>
+        <li><a href="assistant.html" class="active">Подбор программы</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <span class="status-pill">
+        <span class="dot ok" id="statusDot"></span>
+        <span id="statusText"><span class="js-program-count">104</span> программы</span>
+      </span>
+      <span class="version-pill">v1.0 · 2027</span>
+      <button class="theme-btn" id="themeToggle" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-nav-drawer">
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="programs.html">Каталог программ</a></li>
+    <li><a href="roadmap.html">План</a></li>
+    <li><a href="assistant.html" class="active">Подбор программы</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Подбор программ · Бакалавриат 2027</div>
+    <h1 class="hero-title">
+      Найдём программу,<br>
+      <span class="accent">которая подойдёт именно вам</span>
+    </h1>
+    <p class="hero-sub">
+      Укажите результаты ЕГЭ, интересы и город — сервис подберёт подходящие
+      образовательные программы среди <strong id="programCount">—</strong> вариантов
+      в базе данных.
+    </p>
+    <div class="hero-facts">
+      <span class="fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+        Бакалавриат
+      </span>
+      <span class="fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+        Вузы по всей России
+      </span>
+      <span class="fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+        Подбор за секунды
+      </span>
+    </div>
+  </div>
+  <div class="hero-fade"></div>
+</section>
+
+<!-- ============================================================
+     LAYOUT
+     ============================================================ -->
+<div class="layout">
+
+  <!-- ---------- Форма ---------- -->
+  <form class="panel" id="form" autocomplete="off">
+    <div class="panel-header">
+      <div class="panel-title">Параметры подбора</div>
+      <div class="panel-step">шаг 01</div>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">1</span> Быстрый старт</label>
+      <div class="presets">
+        <button type="button" class="preset" data-preset="it">IT / программирование</button>
+        <button type="button" class="preset" data-preset="math">Математика / ML</button>
+        <button type="button" class="preset" data-preset="humanities">Гуманитарные</button>
+        <button type="button" class="preset" data-preset="econ">Экономика / бизнес</button>
+        <button type="button" class="preset" data-preset="law">Право</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">2</span> ЕГЭ и баллы</label>
+      <div id="egeList"></div>
+      <button type="button" class="add-btn" id="addEge">Добавить предмет</button>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">3</span> Хобби и интересы</label>
+      <div class="tags" id="tags">
+        <input type="text" id="tagInput" placeholder="Введите и нажмите Enter…" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">4</span> Город</label>
+      <select id="city">
+        <option value="">Все города</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">5</span> Вуз</label>
+      <select id="university">
+        <option value="">Все вузы</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">6</span> Дополнительные баллы (индивидуальные достижения)</label>
+      <input type="number" id="bonusPoints" value="0" min="0" max="10" placeholder="Например: 5" />
+      <div class="total-score-banner">
+        <span class="total-score-label">Доп. баллы к сумме</span>
+        <span class="total-score-value" id="achievementsBonus">+0</span>
+      </div>
+      <div style="font-size: 11.5px; color: var(--muted); margin-top: 6px;">Введите сумму баллов за ваши индивидуальные достижения — максимум 10 баллов учитывается при расчёте шансов</div>
+    </div>
+
+    <div class="field">
+      <label class="field-label"><span class="num">7</span> Количество программ</label>
+      <input type="number" id="topK" value="5" min="1" max="16" />
+    </div>
+
+    <div class="toggle-row">
+      <span class="toggle-text">Показывать программы с недостающими ЕГЭ</span>
+      <label class="switch">
+        <input type="checkbox" id="allowMissing" />
+        <span class="track"></span>
+        <span class="thumb"></span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-primary" id="submitBtn">
+      Подобрать программы
+    </button>
+  </form>
+
+  <!-- ---------- Результаты ---------- -->
+  <div class="results-col">
+    <div class="results-head">
+      <h2>Результаты</h2>
+      <div class="meta" id="resultsMeta"></div>
+    </div>
+    <div id="errorBox"></div>
+    <div id="results">
+      <div class="empty">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="m20 20-3.6-3.6"/>
+          </svg>
+        </div>
+        <div class="empty-title">Заполните форму</div>
+        Укажите ЕГЭ, интересы и нажмите «Подобрать программы» —<br>
+        мы покажем персональную подборку.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3 2 8.5l10 5.5 10-5.5L12 3z" fill="currentColor" stroke="none"/>
+            <path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/>
+          </svg>
+        </span>
+        <span class="logo-text">Edu<span>Match</span></span>
+      </a>
+      <p class="footer-desc">
+        Единая информационная система для абитуриентов 2027 года. Подбор программ бакалавриата, калькулятор баллов ЕГЭ и пошаговый план поступления.
+      </p>
+    </div>
+
+    <ul class="footer-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="programs.html">Каталог программ</a></li>
+      <li><a href="roadmap.html">План 2027</a></li>
+      <li><a href="assistant.html">Подбор программы</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-bottom">
+    <div>&copy; 2027 <strong>EduMatch</strong>. Все данные актуализированы по правилам приёма 2027.</div>
+    <div>База данных: 104 специальности · НИУ ВШЭ, МФТИ, МГТУ им. Баумана, ННГУ, НГТУ, НГЛУ, ПИМУ</div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   Конфиг
+   ============================================================ */
+const API_BASE = "http://localhost:8000";
+
+const SUBJECTS = [
+  ["russian",          "Русский язык"],
+  ["math",             "Математика"],
+  ["informatics",      "Информатика"],
+  ["physics",          "Физика"],
+  ["social_studies",   "Обществознание"],
+  ["history",          "История"],
+  ["foreign_language", "Иностранный язык"],
+  ["literature",       "Литература"],
+];
+
+const PRESETS = {
+  it: {
+    ege: [["math", 92], ["russian", 88], ["informatics", 95]],
+    hobbies: ["python", "машинное обучение", "алгоритмы"],
+  },
+  math: {
+    ege: [["math", 95], ["russian", 85], ["physics", 90]],
+    hobbies: ["математика", "анализ данных", "ML"],
+  },
+  humanities: {
+    ege: [["russian", 90], ["literature", 87], ["foreign_language", 93]],
+    hobbies: ["книги", "перевод", "писательство"],
+  },
+  econ: {
+    ege: [["math", 88], ["russian", 85], ["social_studies", 82]],
+    hobbies: ["финансы", "бизнес", "аналитика"],
+  },
+  law: {
+    ege: [["social_studies", 90], ["russian", 88], ["history", 85]],
+    hobbies: ["право", "политика", "аргументация"],
+  },
+};
+
+const DEFAULTS = {
+  w_semantic: 0.45,
+  w_ege_coverage: 0.30,
+  w_ege_scores: 0.25,
+  use_reranker: true,
+};
+
+let hobbies = [];
+
+/* ============================================================
+   Тема
+   ============================================================ */
+function initTheme() {
+  const themeToggle = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("edumatch_theme") || localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("edumatch_theme", next);
+      localStorage.setItem("theme", next);
+    });
+  }
+
+  // Mobile nav toggle (unified header)
+  const mobileBtn = document.querySelector('.mobile-menu-btn');
+  const mobileDrawer = document.querySelector('.mobile-nav-drawer');
+  if (mobileBtn && mobileDrawer) {
+    mobileBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('open');
+    });
+  }
+}
+
+/* ============================================================
+   Проверка сервиса
+   ============================================================ */
+async function pingService() {
+  const dot     = document.getElementById("statusDot");
+  const countEl = document.getElementById("programCount");
+  const headerCount = document.querySelector(".js-program-count");
+
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 4000);
+
+  try {
+    const r = await fetch(`${API_BASE}/health`, { signal: ctrl.signal });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const data = await r.json();
+    if (dot) dot.className = "dot ok";
+    if (countEl) countEl.textContent = String(data.programs);
+    if (headerCount) headerCount.textContent = String(data.programs);
+  } catch (e) {
+    if (dot) dot.className = "dot err";
+    if (countEl) countEl.textContent = "—";
+    console.error("[pingService]", e);
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+/* ============================================================
+   EGE строки
+   ============================================================ */
+function egeRow(subject = "russian", score = 80) {
+  const row = document.createElement("div");
+  row.className = "ege-row";
+
+  const select = document.createElement("select");
+  for (const [val, label] of SUBJECTS) {
+    const opt = document.createElement("option");
+    opt.value = val;
+    opt.textContent = label;
+    if (val === subject) opt.selected = true;
+    select.appendChild(opt);
+  }
+
+  const input = document.createElement("input");
+  input.type = "number";
+  input.min = 0;
+  input.max = 100;
+  input.value = score;
+  input.placeholder = "балл";
+
+  const remove = document.createElement("button");
+  remove.type = "button";
+  remove.className = "icon-btn";
+  remove.textContent = "×";
+  remove.title = "Удалить";
+  remove.addEventListener("click", () => row.remove());
+
+  row.append(select, input, remove);
+  return row;
+}
+
+function addEgeRow(subject, score) {
+  document.getElementById("egeList").appendChild(egeRow(subject, score));
+}
+
+/* ============================================================
+   Теги хобби
+   ============================================================ */
+function renderTags() {
+  const box = document.getElementById("tags");
+  const input = document.getElementById("tagInput");
+
+  box.querySelectorAll(".tag").forEach(el => el.remove());
+
+  hobbies.forEach((h, i) => {
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.innerHTML = `${escapeHtml(h)} <button type="button" title="Удалить">×</button>`;
+    tag.querySelector("button").addEventListener("click", () => {
+      hobbies.splice(i, 1);
+      renderTags();
+    });
+    box.insertBefore(tag, input);
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function initTagInput() {
+  const input = document.getElementById("tagInput");
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault();
+      const v = input.value.trim().replace(/,$/, "");
+      if (v && !hobbies.includes(v)) {
+        hobbies.push(v);
+        renderTags();
+      }
+      input.value = "";
+    }
+    if (e.key === "Backspace" && !input.value && hobbies.length) {
+      hobbies.pop();
+      renderTags();
+    }
+  });
+  input.addEventListener("blur", () => {
+    const v = input.value.trim();
+    if (v && !hobbies.includes(v)) {
+      hobbies.push(v);
+      renderTags();
+      input.value = "";
+    }
+  });
+}
+
+/* ============================================================
+   Пресеты
+   ============================================================ */
+function bindPresets() {
+  document.querySelectorAll(".preset").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const p = PRESETS[btn.dataset.preset];
+      if (!p) return;
+
+      const list = document.getElementById("egeList");
+      list.innerHTML = "";
+      p.ege.forEach(([s, v]) => addEgeRow(s, v));
+
+      hobbies = [...p.hobbies];
+      renderTags();
+    });
+  });
+}
+
+/* ============================================================
+   Query
+   ============================================================ */
+function buildQuery() {
+  const params = new URLSearchParams();
+
+  const egePairs = [];
+  document.querySelectorAll(".ege-row").forEach(row => {
+    const subj  = row.querySelector("select").value;
+    const score = parseInt(row.querySelector("input").value, 10);
+    if (!isNaN(score) && score >= 0) egePairs.push(`${subj}:${score}`);
+  });
+  if (egePairs.length) params.set("ege", egePairs.join(","));
+
+  if (hobbies.length) params.set("hobbies", hobbies.join(","));
+
+  const city = document.getElementById("city").value.trim();
+  if (city) params.set("city", city);
+
+  const uni = document.getElementById("university").value.trim();
+  if (uni) params.set("university", uni);
+
+  params.set("top_k", parseInt(document.getElementById("topK").value, 10) || 5);
+  params.set("w_semantic",     DEFAULTS.w_semantic);
+  params.set("w_ege_coverage", DEFAULTS.w_ege_coverage);
+  params.set("w_ege_scores",   DEFAULTS.w_ege_scores);
+  params.set("use_reranker",           DEFAULTS.use_reranker);
+  params.set("allow_missing_required", document.getElementById("allowMissing").checked);
+
+  // Индивидуальные достижения до 10 баллов (передаем как bonus если API поддерживает)
+  const bonus = (typeof getAchievementsBonus === 'function') ? getAchievementsBonus() : 0;
+  if (bonus > 0) params.set("bonus", bonus);
+
+  return params.toString();
+}
+
+function getAchievementsBonus() {
+  const el = document.getElementById('bonusPoints');
+  if (!el) return 0;
+  const v = parseInt(el.value, 10);
+  if (isNaN(v) || v <= 0) return 0;
+  return Math.min(10, v);
+}
+
+function updateAchievementsBonus() {
+  const bonus = getAchievementsBonus();
+  const el = document.getElementById('achievementsBonus');
+  if (el) el.textContent = '+' + bonus;
+}
+
+function initAchievements() {
+  const input = document.getElementById('bonusPoints');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const v = parseInt(input.value, 10);
+    if (!isNaN(v)) {
+      if (v > 10) input.value = 10;
+      if (v < 0) input.value = 0;
+    }
+    updateAchievementsBonus();
+  });
+  input.addEventListener('blur', () => {
+    if (input.value === '' || isNaN(parseInt(input.value, 10))) input.value = 0;
+    updateAchievementsBonus();
+  });
+  updateAchievementsBonus();
+}
+
+async function initDropdowns() {
+  const citySel = document.getElementById('city');
+  const uniSel = document.getElementById('university');
+  if (!citySel || !uniSel) return;
+
+  let programs = [];
+  // Попытка взять из уже загруженного js/data.js
+  if (window.PROGRAMS_DATA && Array.isArray(window.PROGRAMS_DATA)) {
+    programs = window.PROGRAMS_DATA;
+  } else {
+    try {
+      // пробуем загрузить json (относительный путь)
+      const paths = ['universities_programs.json', './universities_programs.json', '/universities_programs.json'];
+      for (const p of paths) {
+        try {
+          const r = await fetch(p);
+          if (r.ok) { programs = await r.json(); break; }
+        } catch {}
+      }
+    } catch {}
+    // fallback — загружаем js/data.js как script
+    if (!programs.length) {
+      try {
+        await new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = 'js/data.js';
+          s.onload = resolve;
+          s.onerror = reject;
+          document.head.appendChild(s);
+        });
+        if (window.PROGRAMS_DATA) programs = window.PROGRAMS_DATA;
+      } catch {}
+    }
+  }
+
+  if (!programs.length) {
+    console.warn('[initDropdowns] не удалось загрузить список программ, оставляем ручной ввод');
+    return;
+  }
+
+  const cities = [...new Set(programs.map(pr => pr.city).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru'));
+  const unisByCity = {};
+  programs.forEach(pr => {
+    if (!pr.city || !pr.university) return;
+    if (!unisByCity[pr.city]) unisByCity[pr.city] = new Set();
+    unisByCity[pr.city].add(pr.university);
+  });
+  const universities = [...new Set(programs.map(pr => pr.university).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru'));
+
+  function fillCity() {
+    const cur = citySel.value;
+    citySel.innerHTML = '<option value="">Все города</option>';
+    cities.forEach(c => {
+      const o = document.createElement('option');
+      o.value = c;
+      o.textContent = c;
+      citySel.appendChild(o);
+    });
+    if (cur) citySel.value = cur;
+  }
+
+  function fillUniversities(city) {
+    const cur = uniSel.value;
+    uniSel.innerHTML = '<option value="">Все вузы</option>';
+    let list = universities;
+    if (city && unisByCity[city]) {
+      list = [...unisByCity[city]].sort((a,b)=>a.localeCompare(b,'ru'));
+    }
+    list.forEach(u => {
+      const o = document.createElement('option');
+      o.value = u;
+      o.textContent = u;
+      uniSel.appendChild(o);
+    });
+    if (cur && list.includes(cur)) uniSel.value = cur;
+  }
+
+  fillCity();
+  fillUniversities('');
+
+  citySel.addEventListener('change', () => {
+    fillUniversities(citySel.value);
+  });
+}
+
+/* ============================================================
+   Рендер результатов
+   ============================================================ */
+const DIRECTION_RU = {
+  it: "IT", math: "Математика", linguistics: "Лингвистика",
+  management: "Менеджмент", economics: "Экономика",
+  law: "Право", humanities: "Гуманитарные", design: "Дизайн",
+};
+
+const SUBJECT_RU = Object.fromEntries(SUBJECTS);
+
+function getMatch(score) {
+  const percent = Math.max(0, Math.min(100, Math.round((score || 0) * 100)));
+  if (percent >= 75) return { label: "Отличное совпадение", cls: "good", percent };
+  if (percent >= 55) return { label: "Хорошее совпадение",  cls: "good", percent };
+  if (percent >= 35) return { label: "Возможный вариант",   cls: "warn", percent };
+  return { label: "Слабое совпадение", cls: "bad", percent };
+}
+
+function renderResults(items) {
+  const box = document.getElementById("results");
+  const meta = document.getElementById("resultsMeta");
+
+  if (!items.length) {
+    box.innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="m20 20-3.6-3.6"/>
+          </svg>
+        </div>
+        <div class="empty-title">Ничего не найдено</div>
+        Попробуйте изменить параметры — расширить список ЕГЭ<br>
+        или убрать ограничения по городу и вузу.
+      </div>`;
+    meta.textContent = "";
+    return;
+  }
+
+  const bonus = getAchievementsBonus();
+  meta.textContent = bonus > 0 ? `Найдено: ${items.length} · +${bonus} баллов ИД` : `Найдено: ${items.length}`;
+
+  box.innerHTML = items.map((it, i) => {
+    const p = it.program;
+    const dir = DIRECTION_RU[p.direction] || p.direction;
+    const missing = new Set(it.missing_required || []);
+    const match = getMatch(it.score);
+    const num = String(i + 1).padStart(2, '0');
+
+    const requiredChips = (p.requiredEge || []).map(s => {
+      const ok = !missing.has(s);
+      return `<span class="chip ${ok ? "ok" : "missing"}" title="${ok ? "Зачтён" : "Не хватает"}">
+        ${ok ? "✓" : "✕"} ${SUBJECT_RU[s] || s}
+      </span>`;
+    }).join("");
+
+    const optionalChips = (p.optionalEge || []).map(s =>
+      `<span class="chip">${SUBJECT_RU[s] || s}</span>`
+    ).join("");
+
+    const infoChips = [];
+    if (p.minScore)     infoChips.push(`<span class="chip info">Проходной: ${p.minScore}</span>`);
+    if (p.budgetPlaces) infoChips.push(`<span class="chip info">Бюджет: ${p.budgetPlaces}</span>`);
+    if (it.user_total)  infoChips.push(`<span class="chip info">Ваша сумма: ${it.user_total}</span>`);
+
+    const missingNote = missing.size
+      ? `<div class="missing-note">Не хватает ЕГЭ: ${[...missing].map(s => SUBJECT_RU[s] || s).join(", ")}</div>`
+      : "";
+
+    return `
+      <article class="card">
+        <div class="card-top">
+          <div class="card-main">
+            <div class="card-num">№ ${num} · ${escapeHtml(dir)}</div>
+            <h3 class="card-title">${escapeHtml(p.title)}</h3>
+            <div class="card-sub">
+              <span class="uni-tag">${escapeHtml(p.university)}</span>
+              <span>${escapeHtml(p.city)}</span>
+            </div>
+          </div>
+          <div class="match-wrap ${match.cls}">
+            <div class="match-ring" style="--p:${match.percent}">
+              <svg viewBox="0 0 76 76">
+                <circle class="ring-bg" cx="38" cy="38" r="32"></circle>
+                <circle class="ring-fg" cx="38" cy="38" r="32"></circle>
+              </svg>
+              <span class="ring-val">${match.percent}%</span>
+            </div>
+            <span class="match-label">${match.label}</span>
+          </div>
+        </div>
+
+        <p class="desc">${escapeHtml(p.description)}</p>
+
+        <div class="chips-wrap">
+          ${requiredChips}
+          ${optionalChips}
+          ${infoChips.join("")}
+        </div>
+
+        ${missingNote}
+      </article>
+    `;
+  }).join("");
+}
+
+function showError(msg) {
+  document.getElementById("errorBox").innerHTML =
+    `<div class="error">${escapeHtml(msg)}</div>`;
+}
+
+function clearError() {
+  document.getElementById("errorBox").innerHTML = "";
+}
+
+/* ============================================================
+   Submit
+   ============================================================ */
+async function onSubmit(e) {
+  e.preventDefault();
+  clearError();
+
+  const btn = document.getElementById("submitBtn");
+  const qs  = buildQuery();
+
+  btn.disabled = true;
+  btn.innerHTML = `<span class="loader"></span>Подбираем…`;
+
+  try {
+    const r = await fetch(`${API_BASE}/match?${qs}`, { method: "GET" });
+
+    if (!r.ok) {
+      let detail = `HTTP ${r.status}`;
+      try {
+        const j = await r.json();
+        if (j.detail) detail = typeof j.detail === "string"
+          ? j.detail
+          : JSON.stringify(j.detail);
+      } catch {}
+      throw new Error(detail);
+    }
+
+    const items = await r.json();
+    renderResults(items);
+  } catch (err) {
+    showError("Не удалось получить результаты. Попробуйте ещё раз.");
+    document.getElementById("results").innerHTML =
+      `<div class="empty">
+         <div class="empty-icon">
+           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             <path d="M12 9v4"/><path d="M12 17h.01"/>
+             <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/>
+           </svg>
+         </div>
+         <div class="empty-title">Сервис недоступен</div>
+         Проверьте соединение и повторите запрос.
+       </div>`;
+    document.getElementById("resultsMeta").textContent = "";
+    console.error("[onSubmit]", err);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Подобрать программы";
+  }
+}
+
+/* ============================================================
+   Init
+   ============================================================ */
+function init() {
+  initTheme();
+
+  addEgeRow("math", 90);
+  addEgeRow("russian", 85);
+  addEgeRow("informatics", 90);
+
+  document.getElementById("addEge").addEventListener("click", () => addEgeRow());
+  document.getElementById("form").addEventListener("submit", onSubmit);
+
+  initTagInput();
+  renderTags();
+  bindPresets();
+  initAchievements();
+  initDropdowns();
+  pingService();
+}
+
+document.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# ============================================================
+# EduMatch — запуск одной командой:
+#   docker compose up --build
+#
+# После старта сайт и API доступны на http://localhost:8000
+#   «/health»    — проверка готовности
+#   «/programs»  — вся база программ (JSON)
+#   «/match?...» — подбор программ
+# ============================================================
+
+services:
+  edumatch:
+    build: .
+    image: edumatch:latest
+    container_name: edumatch
+    ports:
+      - "8000:8000"
+    environment:
+      # Модели встроены в образ при сборке — сеть для HuggingFace не нужна
+      HF_HUB_OFFLINE: "1"
+    restart: unless-stopped
+    # При нехватке RAM (torch + 2 модели ≈ 1.5–2 ГБ) раскомментируйте:
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 4G

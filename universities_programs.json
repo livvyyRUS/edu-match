@@ -1,0 +1,3053 @@
+[
+    {
+        "id": 1,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "01.03.01",
+        "title": "Математика",
+        "profile": "Фундаментальная и прикладная математика",
+        "description": "Широкий бакалавриат: фундаментальная математика (алгебра, анализ, геометрия, теория вероятностей) с возможностью перехода на программы прикладной математики, ПМИ, бизнес-информатики или экономики на 2-м курсе. Изучение математических основ ИИ, численных методов и моделирования. Подготовка к научной карьере и R&D-позициям в IT и финтехе. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 252,
+        "budgetPlaces": 20,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 2,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "01.03.02",
+        "title": "Прикладная математика и информатика",
+        "profile": "Компьютерные науки и технологии",
+        "description": "Программа факультета информатики, математики и компьютерных наук. Компьютерные науки и технологии: алгоритмы и структуры данных, машинное обучение, анализ данных, разработка ПО, базы данных, компьютерная графика. Сильная математическая база в сочетании с практическими навыками программирования. Партнёрские модули с IT-компаниями. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 271,
+        "budgetPlaces": 55,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 3,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "01.03.04",
+        "title": "Прикладная математика",
+        "profile": "Фундаментальная и прикладная математика",
+        "description": "Программа широкого бакалавриата по прикладной математике: фундаментальная математическая подготовка с фокусом на прикладные задачи — численные методы, оптимизация, математическое моделирование. Возможность выбора специализации на старших курсах. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 252,
+        "budgetPlaces": 20,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 4,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "09.03.04",
+        "title": "Программная инженерия",
+        "profile": "Компьютерные науки и технологии",
+        "description": "Программная инженерия с профилем «Компьютерные науки и технологии». Изучение полного цикла разработки ПО: от проектирования архитектуры и требований до тестирования и сопровождения. Алгоритмы, структуры данных, операционные системы, базы данных, машинное обучение, веб-разработка. Проектная работа с индустриальными партнёрами. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 280,
+        "budgetPlaces": 50,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 5,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "09.03.04",
+        "title": "Программная инженерия",
+        "profile": "Технологии искусственного и дополненного интеллекта",
+        "description": "Программа по технологиям искусственного и дополненного интеллекта. Фокус на машинном обучении, глубоком обучении, компьютерном зрении, обработке естественного языка, AR/VR-технологиях. Набор только по БВИ (без вступительных испытаний — для олимпиадников). Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "informatics"
+        ],
+        "optionalEge": [],
+        "minScore": null,
+        "budgetPlaces": 10,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru",
+        "note": "БВИ — зачисление только абитуриентов с правом зачисления вне конкурса"
+    },
+    {
+        "id": 6,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "37.03.01",
+        "title": "Психология",
+        "profile": "Психология в бизнесе",
+        "description": "Психология в бизнесе — междисциплинарная программа на стыке психологии, менеджмента и экономики. Изучение организационной психологии, психологии потребителя, HR-аналитики, методов исследования и психодиагностики. Только платная основа. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "biology",
+            "math",
+            "social_studies"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "biology"
+        ],
+        "optionalEge": [
+            "math",
+            "social_studies"
+        ],
+        "minScore": null,
+        "budgetPlaces": 0,
+        "direction": "psychology",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru",
+        "note": "Только платная основа"
+    },
+    {
+        "id": 7,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "38.03.01",
+        "title": "Экономика",
+        "profile": "Международный бакалавриат по бизнесу и экономике",
+        "description": "Международный бакалавриат по бизнесу и экономике — билингвальная программа (русский + английский). Экономическая теория, микро- и макроэкономика, финансы, бухгалтерский учёт, маркетинг, менеджмент, бизнес-аналитика. Возможность межкампусной мобильности (СПб, Пермь). Партнёрские модули с представителями бизнеса (Яндекс, Mail.ru, ГАЗ, Сбербанк, ВТБ, КПМГ). Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics"
+        ],
+        "minScore": 270,
+        "budgetPlaces": 60,
+        "direction": "economics",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 8,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "38.03.02",
+        "title": "Менеджмент",
+        "profile": "Международный бакалавриат по бизнесу и экономике",
+        "description": "Менеджмент в рамках международного бакалавриата по бизнесу и экономике — билингвальная программа. Стратегический менеджмент, маркетинг, финансовый менеджмент, управление проектами, организационное поведение. Обучение на русском и английском языках с возможностью получения диплома по двум направлениям (экономика + менеджмент). Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics"
+        ],
+        "minScore": 266,
+        "budgetPlaces": 60,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 9,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "38.03.02",
+        "title": "Менеджмент",
+        "profile": "Цифровой маркетинг",
+        "description": "Цифровой маркетинг — программа на стыке маркетинга, данных и IT. Изучение digital-стратегий, интернет-маркетинга, SEO/SEM, SMM, аналитики данных, маркетинговых исследований, бренд-менеджмента. Только платная основа. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics"
+        ],
+        "minScore": null,
+        "budgetPlaces": 0,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru",
+        "note": "Только платная основа"
+    },
+    {
+        "id": 10,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "38.03.05",
+        "title": "Бизнес-информатика",
+        "profile": "Компьютерные науки и технологии",
+        "description": "Бизнес-информатика с профилем «Компьютерные науки и технологии». Стык IT и менеджмента: проектирование информационных систем для бизнеса, ERP/CRM-системы, BI-аналитика, управление цифровыми продуктами, базы данных, программирование. Подготовка специалистов, способных объединять технологические и бизнес-компетенции. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "informatics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "informatics"
+        ],
+        "minScore": 269,
+        "budgetPlaces": 65,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 11,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "40.03.01",
+        "title": "Юриспруденция",
+        "profile": "Без профиля",
+        "description": "Фундаментальная подготовка в области права: гражданское, уголовное, административное, международное право, корпоративное право, правовое регулирование цифровой экономики. Английский язык на профессиональном уровне, информационно-технологическое обслуживание юридической деятельности. Междисциплинарный подход с элементами экономики и IT. Источник: nnov.hse.ru/ba/law",
+        "ege": [
+            "russian",
+            "social_studies",
+            "foreign_language",
+            "history"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "foreign_language",
+            "history"
+        ],
+        "minScore": 265,
+        "budgetPlaces": 55,
+        "direction": "law",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 12,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "45.03.01",
+        "title": "Филология",
+        "profile": "Без профиля",
+        "description": "Филология с изучением иностранных языков и литературы. Анализ текстов, теория литературы, сравнительное литературоведение, цифровая филология, корпусная лингвистика. Изучение английского языка на продвинутом уровне. Подготовка к работе в образовании, медиа, издательском деле, культурных проектах. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "literature"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "foreign_language",
+            "literature"
+        ],
+        "optionalEge": [],
+        "minScore": 261,
+        "budgetPlaces": 25,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 13,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "45.03.02",
+        "title": "Лингвистика",
+        "profile": "Иностранные языки и межкультурная бизнес-коммуникация",
+        "description": "Лингвистика с профилем «Иностранные языки и межкультурная бизнес-коммуникация». Изучение иностранных языков, теория перевода, межкультурная коммуникация, деловая переписка, бизнес-коммуникация на иностранных языках. Только платная основа. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "social_studies",
+            "history"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "history"
+        ],
+        "minScore": null,
+        "budgetPlaces": 0,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru",
+        "note": "Только платная основа"
+    },
+    {
+        "id": 14,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "45.03.03",
+        "title": "Фундаментальная и прикладная лингвистика",
+        "profile": "Без профиля",
+        "description": "Фундаментальная и прикладная лингвистика — на стыке языка, математики и IT. Изучение математической лингвистики, компьютерной обработки языка, корпусной лингвистики, автоматического перевода, анализа текстов, NLP-технологий. Подготовка специалистов для IT-сферы, работающих с естественным языком. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "math",
+            "informatics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics"
+        ],
+        "minScore": 265,
+        "budgetPlaces": 30,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru"
+    },
+    {
+        "id": 15,
+        "city": "Нижний Новгород",
+        "university": "НИУ ВШЭ",
+        "code": "54.03.01",
+        "title": "Дизайн",
+        "profile": "Без профиля",
+        "description": "Дизайн — программа с творческим конкурсом (внутренний экзамен). Визуальные коммуникации, графический дизайн, UI/UX, дизайн среды, брендинг, типографика, цифровая иллюстрация. Только платная основа. Источник: nnov.hse.ru",
+        "ege": [
+            "russian",
+            "literature"
+        ],
+        "egeCount": 2,
+        "requiredEge": [
+            "russian",
+            "literature"
+        ],
+        "optionalEge": [],
+        "minScore": null,
+        "budgetPlaces": 0,
+        "direction": "design",
+        "form": "fulltime",
+        "source": "nnov.hse.ru, foxford.ru/entrance/961/study-programs, vuzoteka.ru",
+        "note": "Только платная основа, требуется внутренний экзамен"
+    },
+    {
+        "id": 16,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "01.03.01",
+        "title": "Математика",
+        "profile": "Математика",
+        "description": "Классическая фундаментальная подготовка в алгебре, математическом анализе, геометрии, теории вероятностей и дифференциальных уравнениях. База для научной карьеры и R&D-позиций в IT и финтехе. Сильная школа математики, тесная связь с институтами РАН. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 241,
+        "budgetPlaces": 20,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 17,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "01.03.02",
+        "title": "Прикладная математика и информатика",
+        "profile": "Математическое моделирование и ИИ; Вычислительная математика",
+        "description": "Самое крупное направление ИИТММ: численные методы, математическое моделирование, машинное обучение и параллельные вычисления. Сильная связка с лабораториями ННГУ и индустриальными партнёрами (Intel, Huawei). Подготовка к работе в IT, аналитике данных, научных исследованиях. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 245,
+        "budgetPlaces": 110,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 18,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "02.03.02",
+        "title": "Фундаментальная информатика и информационные технологии",
+        "profile": "Сопряженная разработка ПО и аппаратного обеспечения (с ИТ-кампусом Неймарк)",
+        "description": "ФИИТ, сетевая программа, реализуемая совместно с ИТ-кампусом АНО «Неймарк». Сопряжённая разработка программного и аппаратного обеспечения: языки программирования, архитектура ЭВМ, встраиваемые системы, FPGA, системное программирование, IoT. Уникальная программа с доступом к оборудованию ИТ-кампуса. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 271,
+        "budgetPlaces": 25,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 19,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "02.03.02",
+        "title": "Фундаментальная информатика и информационные технологии",
+        "profile": "Системное программирование; Инженерия программного обеспечения",
+        "description": "ФИИТ с профилем системного программирования и инженерии ПО. Математический фундамент для разработки системного ПО и сложных IT-продуктов: языки и трансляторы, операционные системы, верификация программ, распределённые системы, архитектура ПО. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 256,
+        "budgetPlaces": 50,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 20,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "02.03.02",
+        "title": "Фундаментальная информатика и информационные технологии",
+        "profile": "Информационные системы и технологии",
+        "description": "ФИИТ на радиофизическом факультете: проектирование информационных систем, привязка к экспериментальным установкам и обработке физических данных. Информационные системы и технологии в физических исследованиях. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 244,
+        "budgetPlaces": 50,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 21,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "03.03.02",
+        "title": "Физика",
+        "profile": "Фундаментальная физика",
+        "description": "Классическая физическая подготовка в Высшей школе общей и прикладной физики: механика, электродинамика, квантовая физика, термодинамика. Выход в нанотехнологии, лазерную физику, физику плазмы. Сильная экспериментальная база. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 251,
+        "budgetPlaces": 30,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 22,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "03.03.02",
+        "title": "Физика",
+        "profile": "Физика конденсированного состояния; Медицинская физика",
+        "description": "Физика конденсированного состояния и медицинская физика на физическом факультете. Изучение свойств твёрдых тел, полупроводников, наноструктур, а также физических методов в медицине, медицинской аппаратуры и моделирования физиологических процессов. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 194,
+        "budgetPlaces": 25,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 23,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "03.03.03",
+        "title": "Радиофизика",
+        "profile": "Фундаментальная радиофизика; Радиофизика и электроника",
+        "description": "Радиофизика и электроника на радиофизическом факультете. Радиоволны, антенны, СВЧ-электроника, статистическая радиофизика, обработка сигналов, радиолокация. Сильная нижегородская школа (ИПФ РАН, НИРФИ). Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 195,
+        "budgetPlaces": 75,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 24,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "04.03.01",
+        "title": "Химия",
+        "profile": "Химия и материаловедение",
+        "description": "Полный спектр химии — от неорганики и физхимии до полимеров и материаловедения. Сильная экспериментальная база ОКХ ННГУ. Подготовка химиков-исследователей и технологов для химических производств. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "chemistry",
+            "math",
+            "biology",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "chemistry"
+        ],
+        "optionalEge": [
+            "math",
+            "biology",
+            "physics"
+        ],
+        "minScore": 214,
+        "budgetPlaces": 75,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 25,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "05.03.06",
+        "title": "Экология и природопользование",
+        "profile": "Информационные технологии в экологии",
+        "description": "Экология и природопользование с профилем «Информационные технологии в экологии». Экологический мониторинг, ГИС-технологии, оценка воздействия на среду, обработка экологических данных. Вторая квалификация — «Прикладная информатика». Источник: unn.ru",
+        "ege": [
+            "russian",
+            "biology",
+            "math",
+            "informatics",
+            "geography",
+            "chemistry"
+        ],
+        "egeCount": 6,
+        "requiredEge": [
+            "russian",
+            "biology"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "geography",
+            "chemistry"
+        ],
+        "minScore": 206,
+        "budgetPlaces": 25,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 26,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "06.03.01",
+        "title": "Биология",
+        "profile": "Биология",
+        "description": "Широкая биологическая подготовка в Институте биологии и биомедицины с акцентом на молекулярно-клеточное направление и нейронауки. Сильные лаборатории нейрофизиологии и геномики. Профили: биомедицина, биохимия, молекулярная биология, нейробиология. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "biology",
+            "math",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "biology"
+        ],
+        "optionalEge": [
+            "math",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 221,
+        "budgetPlaces": 125,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 27,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "09.03.02",
+        "title": "Информационные системы и технологии",
+        "profile": "Проектирование телекоммуникационных систем; ИТ в системах космической связи",
+        "description": "Информационные системы и технологии на физическом факультете. Проектирование телекоммуникационных систем, информационные технологии в системах космической связи, информационные системы и технологии в физических исследованиях. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 241,
+        "budgetPlaces": 35,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 28,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "09.03.03",
+        "title": "Прикладная информатика",
+        "profile": "Прикладная информатика в области принятия решений; Суперкомпьютерное моделирование",
+        "description": "Прикладная информатика в ИИТММ: системы поддержки принятия решений, аналитика данных, суперкомпьютерное моделирование, инженерный анализ, проектирование и автоматизация производства изделий микроэлектроники. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 250,
+        "budgetPlaces": 30,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 29,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "09.03.03",
+        "title": "Прикладная информатика",
+        "profile": "Прикладная информатика в экономике",
+        "description": "Программа Института экономики на стыке IT и экономики: автоматизация бизнес-процессов, работа с финансовыми и учётными системами, ERP, аналитика данных для бизнеса. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 249,
+        "budgetPlaces": 20,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 30,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "09.03.04",
+        "title": "Программная инженерия",
+        "profile": "Прикладное и индустриальное программирование",
+        "description": "Программная инженерия в ИИТММ: прикладное и индустриальное программирование. Полный цикл разработки ПО — от проектирования архитектуры до тестирования и сопровождения. Алгоритмы, структуры данных, базы данных, системное программирование, веб-разработка. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 266,
+        "budgetPlaces": 70,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 31,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "11.03.04",
+        "title": "Электроника и наноэлектроника",
+        "profile": "Твердотельная электроника и наноэлектроника; Радиофотоника",
+        "description": "Электроника и наноэлектроника на физическом факультете. Современная элементная база, полупроводники, наноструктуры, твёрдотельная электроника, радиофотоника и оптоэлектроника. Прямой выход на ИФМ РАН и оборонные НИИ Нижнего Новгорода. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 210,
+        "budgetPlaces": 37,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 32,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "15.03.03",
+        "title": "Прикладная механика",
+        "profile": "Инженерное приложение суперкомпьютерного моделирования",
+        "description": "Прикладная механика с профилем «Инженерное приложение суперкомпьютерного моделирования». Расчёт деформируемых конструкций, прочность, динамика — с упором на численное моделирование на суперкомпьютере «Лобачевский». Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 233,
+        "budgetPlaces": 15,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 33,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "18.03.01",
+        "title": "Химическая технология",
+        "profile": "Химическая технология производств веществ и материалов",
+        "description": "Инженерная программа на химическом факультете: получение веществ, материалов, особо чистых продуктов. Связка с химическими производствами Дзержинска. В 2025 году бюджетных мест не выделено — только платные. Источник: unn.ru, vuzoteka.ru",
+        "ege": [
+            "russian",
+            "chemistry",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "chemistry"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "minScore": 235,
+        "budgetPlaces": 0,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), vuzoteka.ru (0 бюджетных мест в 2025-2026)",
+        "note": "В 2025 году бюджетных мест не выделено, только платные (15 мест)"
+    },
+    {
+        "id": 34,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "28.03.01",
+        "title": "Нанотехнологии и микросистемная техника",
+        "profile": "Материалы микро- и наносистемной техники",
+        "description": "Нанотехнологии и микросистемная техника на физическом факультете. Тонкие плёнки, наноматериалы, МЭМС — материаловедческая и технологическая подготовка для разработки приборов нового поколения. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 202,
+        "budgetPlaces": 40,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 35,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "37.03.01",
+        "title": "Психология",
+        "profile": "Общая и практическая психология",
+        "description": "Психология на факультете социальных наук. Фундаментальная и прикладная психология: общая психология, психодиагностика, социальная психология, психология развития, консультирование. Исследовательская работа и практические навыки. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "biology",
+            "math",
+            "social_studies"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "biology"
+        ],
+        "optionalEge": [
+            "math",
+            "social_studies"
+        ],
+        "minScore": 228,
+        "budgetPlaces": 50,
+        "direction": "psychology",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 36,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "37.03.02",
+        "title": "Конфликтология",
+        "profile": "Социальная конфликтология",
+        "description": "Уникальная программа на стыке психологии, политики и социологии: медиация, переговоры, управление конфликтами в организациях, социальная конфликтология, методы урегулирования. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "math",
+            "biology",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "math",
+            "biology",
+            "history"
+        ],
+        "minScore": 228,
+        "budgetPlaces": 24,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 37,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "38.03.01",
+        "title": "Экономика",
+        "profile": "Экономика, международный бизнес и предпринимательство; Финансы и кредит",
+        "description": "Базовая экономическая подготовка в Институте экономики с профильными треками: экономика, международный бизнес и предпринимательство; бухгалтерский учёт, экономический анализ и аудит; финансы и кредит. Микро- и макроэкономика, эконометрика, финансы, налоги, ВЭД. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "geography",
+            "history"
+        ],
+        "egeCount": 7,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "geography",
+            "history"
+        ],
+        "minScore": 266,
+        "budgetPlaces": 30,
+        "direction": "economics",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 38,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "38.03.02",
+        "title": "Менеджмент",
+        "profile": "Менеджмент организации; Маркетинг",
+        "description": "Менеджмент в Институте экономики: стратегический менеджмент, маркетинг, управление проектами, финансовый менеджмент, организационное поведение, управление человеческими ресурсами. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "history"
+        ],
+        "egeCount": 6,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "history"
+        ],
+        "minScore": 257,
+        "budgetPlaces": 30,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 39,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "38.03.03",
+        "title": "Управление персоналом",
+        "profile": "Управление и развитие персонала организации",
+        "description": "Управление персоналом на факультете социальных наук: управление и развитие персонала организации, HR-менеджмент, кадровая политика, мотивация, оценка персонала, организационная психология. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "history"
+        ],
+        "egeCount": 6,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "history"
+        ],
+        "minScore": 249,
+        "budgetPlaces": 20,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 40,
+        "city": "Нижний Новгород",
+        "university": "ННГУ им. Лобачевского",
+        "code": "38.03.03",
+        "title": "Управление персоналом",
+        "profile": "Управление человеческими ресурсами",
+        "description": "Управление человеческими ресурсами в Институте экономики: HR-аналитика, управление талантами, кадровое планирование, обучение и развитие персонала, корпоративная культура. Источник: unn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "history"
+        ],
+        "egeCount": 6,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "informatics",
+            "history"
+        ],
+        "minScore": 239,
+        "budgetPlaces": 22,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "unn.ru (официальный план приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 41,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "01.03.02",
+        "title": "Прикладная математика и информатика",
+        "profile": "Математическое моделирование и компьютерные технологии",
+        "description": "Прикладная математика и информатика в Институте радиоэлектроники и информационных технологий. Математическое моделирование, вычислительные методы, программирование, анализ данных, компьютерные технологии. Подготовка специалистов для IT-сферы и наукоёмких производств. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 225,
+        "budgetPlaces": 58,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 42,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "01.03.02",
+        "title": "Прикладная математика и информатика",
+        "profile": "Программирование и системный анализ",
+        "description": "ПМИ в Институте экономики и управления с профилем программирования и системного анализа. Разработка ПО, системный анализ, проектирование информационных систем, базы данных, программирование на стыке с экономикой и управлением. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 231,
+        "budgetPlaces": 58,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 43,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "09.03.01",
+        "title": "Информатика и вычислительная техника",
+        "profile": "Интеллектуальные системы; Программное обеспечение; Системы ИИ",
+        "description": "Информатика и вычислительная техника в Институте радиоэлектроники и информационных технологий. Интеллектуальные системы обработки информации и управления, программное обеспечение средств вычислительной техники, системы искусственного интеллекта. Архитектура ЭВМ, операционные системы, сети, базы данных. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 230,
+        "budgetPlaces": 100,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 44,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "09.03.02",
+        "title": "Информационные системы и технологии",
+        "profile": "Безопасность ИС; Информационно-телекоммуникационные системы и сети",
+        "description": "Информационные системы и технологии: безопасность информационных систем, информационные технологии в дизайне, информационно-телекоммуникационные системы и сети, распределённые информационные системы. Проектирование, разработка и эксплуатация ИС. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 227,
+        "budgetPlaces": 115,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 45,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "11.03.01",
+        "title": "Радиотехника",
+        "profile": "Радиоэлектронные системы",
+        "description": "Радиотехника: радиоэлектронные системы, обработка сигналов, радиопередающие и радиоприёмные устройства, антенно-фидерные устройства, цифровая обработка сигналов. Подготовка для предприятий радиопромышленности и оборонного комплекса. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 195,
+        "budgetPlaces": 35,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 46,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "11.03.02",
+        "title": "Инфокоммуникационные технологии и системы связи",
+        "profile": "Сети связи и системы коммутации",
+        "description": "Инфокоммуникационные технологии: сети связи и системы коммутации, проектирование телекоммуникационных сетей, протоколы передачи данных, сетевая безопасность. Подготовка инженеров связи для телеком-операторов и IT-компаний. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 216,
+        "budgetPlaces": 25,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 47,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "11.03.02",
+        "title": "Инфокоммуникационные технологии и системы связи",
+        "profile": "Оптические системы и сети связи",
+        "description": "Инфокоммуникационные технологии: оптические системы и сети связи, волоконно-оптические линии связи, оптоэлектроника, фотоника. Подготовка специалистов для развития оптических сетей связи. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 207,
+        "budgetPlaces": 25,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 48,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "11.03.03",
+        "title": "Конструирование и технология электронных средств",
+        "profile": "Конструирование и технология электронных устройств",
+        "description": "Конструирование и технология электронных средств: проектирование электронных устройств, печатных плат, схемотехника, технология производства электроники, САПР. Подготовка для предприятий электронной промышленности. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 200,
+        "budgetPlaces": 45,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 49,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "11.03.04",
+        "title": "Электроника и наноэлектроника",
+        "profile": "Промышленная электроника и микропроцессорная техника",
+        "description": "Электроника и наноэлектроника: промышленная электроника и микропроцессорная техника, силовая электроника, микроконтроллеры, системы управления. Подготовка инженеров-электроников для промышленности. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 212,
+        "budgetPlaces": 22,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 50,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "12.03.04",
+        "title": "Биотехнические системы и технологии",
+        "profile": "Биотехнические и медицинские аппараты и системы",
+        "description": "Биотехнические системы и технологии: биотехнические и медицинские аппараты и системы, медицинская электроника, биосигналы, диагностическое оборудование. На стыке инженерии и медицины. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "biology",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 6,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "biology",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 214,
+        "budgetPlaces": 39,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 51,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "13.03.01",
+        "title": "Теплоэнергетика и теплотехника",
+        "profile": "Тепловые электрические станции",
+        "description": "Теплоэнергетика и теплотехника: тепловые электрические станции, котельные установки, тепловые сети, энергосбережение. Подготовка инженеров-теплоэнергетиков для энергетических предприятий. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 228,
+        "budgetPlaces": 10,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 52,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "13.03.02",
+        "title": "Электроэнергетика и электротехника",
+        "profile": "Электромеханические системы автономных объектов",
+        "description": "Электроэнергетика и электротехника: электромеханические системы автономных объектов, электротехнологические установки, электрические машины, электропривод. Подготовка для энергетики, транспорта и промышленности. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 192,
+        "budgetPlaces": 20,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 53,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "13.03.03",
+        "title": "Энергетическое машиностроение",
+        "profile": "Тепловые электрические установки",
+        "description": "Энергетическое машиностроение: тепловые электрические установки, паровые и газовые турбины, котлы, энергоблоки. Проектирование, производство и эксплуатация энергетического оборудования. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 195,
+        "budgetPlaces": 130,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 54,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "14.03.01",
+        "title": "Ядерная энергетика и теплофизика",
+        "profile": "Атомные электрические станции и установки",
+        "description": "Ядерная энергетика и теплофизика: атомные электрические станции и установки, ядерные реакторы, теплофизика, безопасность АЭС. Подготовка для Росатома и атомной отрасли. Один из самых востребованных профилей в НГТУ. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 250,
+        "budgetPlaces": 25,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 55,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "14.03.02",
+        "title": "Ядерные физика и технологии",
+        "profile": "Ядерные реакторы и энергетические установки",
+        "description": "Ядерные физика и технологии: ядерные реакторы и энергетические установки, ядерная физика, радиационная безопасность, обращение с радиоактивными материалами. Подготовка для атомной отрасли и научных центров. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "physics",
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "physics"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "chemistry"
+        ],
+        "minScore": 237,
+        "budgetPlaces": 25,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 56,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "15.03.01",
+        "title": "Машиностроение",
+        "profile": "Оборудование и технология сварочного производства",
+        "description": "Машиностроение: оборудование и технология сварочного производства, сварка, сварочные материалы, автоматизация сварки. Подготовка инженеров-технологов для машиностроения. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 200,
+        "budgetPlaces": 15,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 57,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "15.03.03",
+        "title": "Прикладная механика",
+        "profile": "Динамика, прочность машин, приборов и аппаратуры",
+        "description": "Прикладная механика: динамика, прочность машин, приборов и аппаратуры. Расчёты на прочность, виброустойчивость, надёжность конструкций. Подготовка для транспортного и энергетического машиностроения. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 214,
+        "budgetPlaces": 18,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 58,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "15.03.04",
+        "title": "Автоматизация технологических процессов и производств",
+        "profile": "Автоматизация в машиностроении",
+        "description": "Автоматизация технологических процессов и производств: автоматизация в машиностроении, промышленные контроллеры, робототехнические комплексы, SCADA-системы, ЧПУ. Подготовка инженеров-автоматчиков. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 252,
+        "budgetPlaces": 18,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 59,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "15.03.05",
+        "title": "Конструкторско-технологическое обеспечение машиностроительных производств",
+        "profile": "Технология машиностроения",
+        "description": "Конструкторско-технологическое обеспечение машиностроительных производств: технология машиностроения, металлорежущие станки, режущий инструмент, технологическая оснастка. Подготовка для машиностроительных предприятий. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 219,
+        "budgetPlaces": 25,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 60,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "15.03.06",
+        "title": "Мехатроника и робототехника",
+        "profile": "Промышленная робототехника и робототехнические комплексы",
+        "description": "Мехатроника и робототехника: промышленная робототехника и робототехнические комплексы, системы управления роботами, программирование роботов, мехатронные системы. Подготовка для автоматизации производства. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 255,
+        "budgetPlaces": 18,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 61,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "18.03.01",
+        "title": "Химическая технология",
+        "profile": "Технология электрохимических производств; Химическая технология природных энергоносителей",
+        "description": "Химическая технология: технология электрохимических производств, химическая технология природных энергоносителей и углеродных материалов. Подготовка инженеров-технологов для химической промышленности. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "chemistry",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "chemistry"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "minScore": 198,
+        "budgetPlaces": 32,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 62,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "19.03.01",
+        "title": "Биотехнология",
+        "profile": "Общая и прикладная биотехнология",
+        "description": "Биотехнология: общая и прикладная биотехнология, биосинтез, ферментация, биокатализ, технологии получения биопродуктов. На стыке химии, биологии и инженерии. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "chemistry",
+            "math",
+            "informatics",
+            "biology",
+            "physics"
+        ],
+        "egeCount": 6,
+        "requiredEge": [
+            "russian",
+            "chemistry"
+        ],
+        "optionalEge": [
+            "math",
+            "informatics",
+            "biology",
+            "physics"
+        ],
+        "minScore": 203,
+        "budgetPlaces": 20,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 63,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "21.03.01",
+        "title": "Нефтегазовое дело",
+        "profile": "Эксплуатация и обслуживание объектов транспорта и хранения нефти, газа",
+        "description": "Нефтегазовое дело: эксплуатация и обслуживание объектов транспорта и хранения нефти, газа и продуктов переработки. Трубопроводный транспорт, насосные станции, хранилища. Подготовка для нефтегазовой отрасли. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 231,
+        "budgetPlaces": 25,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 64,
+        "city": "Нижний Новгород",
+        "university": "НГТУ им. Р.Е. Алексеева",
+        "code": "22.03.01",
+        "title": "Материаловедение и технологии материалов",
+        "profile": "Компьютерные технологии в проектировании перспективных материалов",
+        "description": "Материаловедение и технологии материалов: компьютерные технологии в проектировании перспективных материалов, наноматериалы, композиты, металловедение. Источник: nntu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "chemistry",
+            "physics"
+        ],
+        "minScore": 190,
+        "budgetPlaces": 18,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "nntu.ru (официальные контрольные цифры приема 2025), tabiturient.ru"
+    },
+    {
+        "id": 65,
+        "city": "Нижний Новгород",
+        "university": "ПИМУ",
+        "code": "31.05.01",
+        "title": "Лечебное дело",
+        "profile": "Лечебное дело",
+        "description": "Лечебное дело (специалитет, 6 лет) — классический медицинский специалитет. Подготовка врача с выходом в ординатуру по любой клинической специальности: терапия, хирургия, анестезиология-реаниматация, кардиология и др. Клиническая практика в крупнейших больницах Нижегородской области. Симуляционный центр и 12 учебных лабораторий. Источник: pimunn.ru",
+        "ege": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "optionalEge": [],
+        "minScore": 263,
+        "budgetPlaces": 299,
+        "direction": "medicine",
+        "form": "fulltime",
+        "source": "pimunn.ru/priem-na-pervyy-kurs, vuzoteka.ru"
+    },
+    {
+        "id": 66,
+        "city": "Нижний Новгород",
+        "university": "ПИМУ",
+        "code": "31.05.02",
+        "title": "Педиатрия",
+        "profile": "Педиатрия",
+        "description": "Педиатрия (специалитет, 6 лет) — подготовка врача-педиатра. Выход в ординатуру: неонатология, детская хирургия, аллергология, детская кардиология и др. Работа в детских поликлиниках и стационарах. Источник: pimunn.ru",
+        "ege": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "optionalEge": [],
+        "minScore": 258,
+        "budgetPlaces": 150,
+        "direction": "medicine",
+        "form": "fulltime",
+        "source": "pimunn.ru/priem-na-pervyy-kurs, vuzoteka.ru"
+    },
+    {
+        "id": 67,
+        "city": "Нижний Новгород",
+        "university": "ПИМУ",
+        "code": "31.05.03",
+        "title": "Стоматология",
+        "profile": "Стоматология",
+        "description": "Стоматология (специалитет, 5 лет) — подготовка врача-стоматолога. Профили ординатуры: терапевтическая, хирургическая, ортопедическая стоматология, ортодонтия. Работа в частных и государственных клиниках, возможность частной практики. Источник: pimunn.ru",
+        "ege": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "optionalEge": [],
+        "minScore": 286,
+        "budgetPlaces": 33,
+        "direction": "medicine",
+        "form": "fulltime",
+        "source": "pimunn.ru/priem-na-pervyy-kurs, vuzoteka.ru"
+    },
+    {
+        "id": 68,
+        "city": "Нижний Новгород",
+        "university": "ПИМУ",
+        "code": "32.05.01",
+        "title": "Медико-профилактическое дело",
+        "profile": "Медико-профилактическое дело",
+        "description": "Медико-профилактическое дело (специалитет, 6 лет) — подготовка специалистов Роспотребнадзора, эпидемиологов, экспертов по гигиене труда и питания, клинических исследователей. Санитарно-эпидемиологический надзор, гигиеническая оценка. Источник: pimunn.ru",
+        "ege": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "optionalEge": [],
+        "minScore": 175,
+        "budgetPlaces": 40,
+        "direction": "medicine",
+        "form": "fulltime",
+        "source": "pimunn.ru/priem-na-pervyy-kurs, vuzoteka.ru"
+    },
+    {
+        "id": 69,
+        "city": "Нижний Новгород",
+        "university": "ПИМУ",
+        "code": "33.05.01",
+        "title": "Фармация",
+        "profile": "Фармация",
+        "description": "Фармация (специалитет, 5 лет) — подготовка провизоров. Фармацевтическая химия, фармакология, технология лекарств, управление аптечным делом, клинические исследования. Работа в аптечных сетях, фармкомпаниях, лабораториях. Источник: pimunn.ru",
+        "ege": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "biology",
+            "chemistry",
+            "russian"
+        ],
+        "optionalEge": [],
+        "minScore": 199,
+        "budgetPlaces": 25,
+        "direction": "medicine",
+        "form": "fulltime",
+        "source": "pimunn.ru/priem-na-pervyy-kurs, vuzoteka.ru"
+    },
+    {
+        "id": 70,
+        "city": "Нижний Новгород",
+        "university": "ПИМУ",
+        "code": "37.05.01",
+        "title": "Клиническая психология",
+        "profile": "Клиническая психология",
+        "description": "Клиническая психология (специалитет, 5,5 лет) — подготовка клинических психологов для системы здравоохранения. Патопсихология, нейропсихология, психосоматика, клиническое консультирование, психодиагностика. Работа в больницах, реабилитационных центрах, частной практике. Источник: pimunn.ru",
+        "ege": [
+            "biology",
+            "social_studies",
+            "russian"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "biology",
+            "russian"
+        ],
+        "optionalEge": [
+            "social_studies"
+        ],
+        "minScore": null,
+        "budgetPlaces": 40,
+        "direction": "psychology",
+        "form": "fulltime",
+        "source": "pimunn.ru/priem-na-pervyy-kurs, vuzoteka.ru"
+    },
+    {
+        "id": 71,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "38.03.02",
+        "title": "Менеджмент",
+        "profile": "Стратегический менеджмент и внешнеэкономическая деятельность",
+        "description": "Менеджмент с профилем «Стратегический менеджмент и внешнеэкономическая деятельность». Стратегическое управление, ВЭД, международный бизнес, межкультурный менеджмент. Углублённое изучение китайского и английского языков. Стажировки за рубежом. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "math",
+            "social_studies",
+            "foreign_language",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "history"
+        ],
+        "minScore": 239,
+        "budgetPlaces": 7,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 72,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "41.03.05",
+        "title": "Международные отношения",
+        "profile": "Международные отношения",
+        "description": "Международные отношения — геополитические процессы, история и современное состояние международных организаций, навыки ведения переговоров, стратегический анализ. Изучение иностранных языков и межкультурной коммуникации. Подготовка для госструктур, международных организаций, дипломатии. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "history",
+            "social_studies",
+            "foreign_language",
+            "geography"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "history"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "foreign_language",
+            "geography"
+        ],
+        "minScore": null,
+        "budgetPlaces": 5,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 73,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "42.03.01",
+        "title": "Реклама и связи с общественностью",
+        "profile": "Реклама и связи с общественностью",
+        "description": "Реклама и связи с общественностью — брендинговые технологии, маркетинговые коммуникации, PR-стратегии, медиапланирование, репутационный менеджмент. Изучение иностранных языков. Подготовка для PR-агентств, медиа, корпоративных коммуникаций. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "history",
+            "foreign_language"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "history",
+            "foreign_language"
+        ],
+        "minScore": 245,
+        "budgetPlaces": 16,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 74,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "43.03.02",
+        "title": "Туризм",
+        "profile": "Туризм",
+        "description": "Туризм — управление в сфере туризма, туроперейтинг, экскурсионное дело, индустрия гостеприимства, туристический маркетинг. Изучение иностранных языков для международного туризма. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "geography",
+            "history",
+            "foreign_language"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "geography",
+            "history",
+            "foreign_language"
+        ],
+        "minScore": null,
+        "budgetPlaces": 15,
+        "direction": "management",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 75,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "44.03.05",
+        "title": "Педагогическое образование (с двумя профилями)",
+        "profile": "Английский язык и Русский как иностранный",
+        "description": "Педагогическое образование с двумя профилями: английский язык и русский язык как иностранный. Методика преподавания языков, лингвистика, педагогика, межкультурная коммуникация. Подготовка учителей английского и РКИ. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "minScore": 195,
+        "budgetPlaces": 17,
+        "direction": "education",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 76,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "44.03.05",
+        "title": "Педагогическое образование (с двумя профилями)",
+        "profile": "Французский язык и Русский язык как иностранный",
+        "description": "Педагогическое образование с двумя профилями: французский язык и русский язык как иностранный. Методика преподавания, лингвистика, педагогика. Подготовка учителей французского и РКИ. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "minScore": 179,
+        "budgetPlaces": 17,
+        "direction": "education",
+        "form": "fulltime",
+        "source": "lunn.ru, vuzopedia.com/nn/nglu, dzen.ru (приблизительно: 100 бюджетных мест на 6 профилей)",
+        "note": "Приблизительное значение: 100 бюджетных мест на 6 профилей"
+    },
+    {
+        "id": 77,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "44.03.05",
+        "title": "Педагогическое образование (с двумя профилями)",
+        "profile": "Немецкий язык и Английский язык",
+        "description": "Педагогическое образование с двумя профилями: немецкий язык и английский язык. Методика преподавания иностранных языков, лингвистика, педагогика, межкультурная коммуникация. Подготовка учителей немецкого и английского. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "minScore": 186,
+        "budgetPlaces": 17,
+        "direction": "education",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 78,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "44.03.05",
+        "title": "Педагогическое образование (с двумя профилями)",
+        "profile": "Английский язык и Психология",
+        "description": "Педагогическое образование с двумя профилями: английский язык и психология. Методика преподавания английского, основы психологии, педагогическая психология. Подготовка специалистов для образования и психологической службы. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "social_studies",
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "social_studies"
+        ],
+        "optionalEge": [
+            "foreign_language",
+            "literature",
+            "history"
+        ],
+        "minScore": 224,
+        "budgetPlaces": 17,
+        "direction": "education",
+        "form": "fulltime",
+        "source": "lunn.ru, vuzopedia.com/nn/nglu, dzen.ru (приблизительно: 100 бюджетных мест на 6 профилей)",
+        "note": "Приблизительное значение: 100 бюджетных мест на 6 профилей"
+    },
+    {
+        "id": 79,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "45.03.01",
+        "title": "Филология",
+        "profile": "Русская и зарубежная филология",
+        "description": "Филология — русская и зарубежная филология. Русский язык, литературоведение, теория текста, стилистика, история литературы. Подготовка филологов для образования, медиа, издательского дела. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "minScore": 218,
+        "budgetPlaces": 0,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "vuzopedia.com/nn/nglu, lunn.ru"
+    },
+    {
+        "id": 80,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "45.03.02",
+        "title": "Лингвистика",
+        "profile": "Теория и методика преподавания иностранных языков (английский)",
+        "description": "Лингвистика — теория и методика преподавания иностранных языков и культур (английский язык). Практическое владение английским, методика преподавания, лингвистика, межкультурная коммуникация. Подготовка преподавателей английского. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "minScore": 249,
+        "budgetPlaces": 7,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 81,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "45.03.02",
+        "title": "Лингвистика",
+        "profile": "Перевод и переводоведение (немецкий язык)",
+        "description": "Лингвистика — перевод и переводоведение (немецкий язык). Теория и практика перевода, устный и письменный перевод, немецкий и английский языки. Подготовка переводчиков для международных коммуникаций. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "minScore": 251,
+        "budgetPlaces": 7,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "lunn.ru, vuzopedia.com/nn/nglu, dzen.ru (приблизительно: 60 бюджетных мест на 9 профилей)",
+        "note": "Приблизительное значение: 60 бюджетных мест на 9 профилей"
+    },
+    {
+        "id": 82,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "45.03.02",
+        "title": "Лингвистика",
+        "profile": "Перевод и переводоведение (французский язык)",
+        "description": "Лингвистика — перевод и переводоведение (французский язык). Теория и практика перевода, устный и письменный перевод, французский и английский языки. Подготовка переводчиков. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "minScore": 268,
+        "budgetPlaces": 7,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "lunn.ru, vuzopedia.com/nn/nglu, dzen.ru (приблизительно: 60 бюджетных мест на 9 профилей)",
+        "note": "Приблизительное значение: 60 бюджетных мест на 9 профилей"
+    },
+    {
+        "id": 83,
+        "city": "Нижний Новгород",
+        "university": "НГЛУ им. Н.А. Добролюбова",
+        "code": "45.05.01",
+        "title": "Перевод и переводоведение",
+        "profile": "Лингвистическое обеспечение межгосударственных отношений (английский)",
+        "description": "Перевод и переводоведение (специалитет, 5 лет) — лингвистическое обеспечение межгосударственных отношений (английский язык). Углублённая подготовка переводчиков-международников: синхронный перевод, письменный перевод, дипломатический протокол. Источник: lunn.ru",
+        "ege": [
+            "russian",
+            "foreign_language",
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "egeCount": 5,
+        "requiredEge": [
+            "russian",
+            "foreign_language"
+        ],
+        "optionalEge": [
+            "social_studies",
+            "literature",
+            "history"
+        ],
+        "minScore": 277,
+        "budgetPlaces": 6,
+        "direction": "humanities",
+        "form": "fulltime",
+        "source": "tabiturient.ru/vuzu/lunn/proxodnoi, vuzopedia.com/nn/nglu"
+    },
+    {
+        "id": 84,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "01.03.03",
+        "title": "Механика и математическое моделирование",
+        "profile": "Вычислительная механика сплошной среды",
+        "description": "Механика и математическое моделирование — вычислительная механика сплошной среды. Создание «цифровых двойников» сложных физических процессов: механика деформируемых сред, уравнения математической физики, сеточные методы, метод конечных элементов. Подготовка специалистов для наукоёмких производств. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 295,
+        "budgetPlaces": 38,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "bmstu.ru, vuzopedia.ru/vuz/4/programs/bakispec/14763, ucheba.ru/program/830028"
+    },
+    {
+        "id": 85,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "01.03.03",
+        "title": "Механика и математическое моделирование",
+        "profile": "Математическое и компьютерное моделирование динамических систем",
+        "description": "Механика и математическое моделирование — математическое и компьютерное моделирование динамических систем и процессов. Численные методы, моделирование динамики, оптимизация, анализ устойчивости. Подготовка для R&D и инженерных расчётов. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 271,
+        "budgetPlaces": 20,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 86,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "01.03.04",
+        "title": "Прикладная математика",
+        "profile": "Математическое моделирование, вычислительные технологии и ИИ",
+        "description": "Прикладная математика — математическое моделирование, вычислительные технологии и искусственный интеллект в науке и технике. Системный анализ, разработка алгоритмов, программное обеспечение информационных систем, базы данных, ИИ. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 287,
+        "budgetPlaces": 40,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 87,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "02.03.01",
+        "title": "Математика и компьютерные науки",
+        "profile": "Математическое и компьютерное моделирование в инженерных задачах",
+        "description": "Математика и компьютерные науки — математическое и компьютерное моделирование в инженерных задачах. Соединение фундаментальной математической теории с практическим программированием. Численные методы, суперкомпьютинг, программирование. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 277,
+        "budgetPlaces": 17,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 88,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "09.03.01",
+        "title": "Информатика и вычислительная техника",
+        "profile": "Программно-аппаратное обеспечение систем ИИ",
+        "description": "Информатика и вычислительная техника — программно-аппаратное обеспечение систем искусственного интеллекта. Архитектура вычислительных систем, встраиваемые системы, ИИ, обработка информации, управление. Системы реального времени. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 262,
+        "budgetPlaces": 254,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 89,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "09.03.01",
+        "title": "Информатика и вычислительная техника",
+        "profile": "Информационные технологии в реальном секторе цифровой экономики",
+        "description": "Информатика и вычислительная техника — информационные технологии в реальном секторе цифровой экономики. Цифровые технологии проектирования, информационная поддержка жизненного цикла промышленной продукции, PLM-системы. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 268,
+        "budgetPlaces": 254,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 90,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "09.03.02",
+        "title": "Информационные системы и технологии",
+        "profile": "Информационные системы и технологии",
+        "description": "Информационные системы и технологии — проектирование, разработка и внедрение информационных систем. Базы данных, сетевые технологии, системная интеграция, администрирование. Подготовка IT-специалистов широкого профиля. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 284,
+        "budgetPlaces": 54,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 91,
+        "city": "Москва",
+        "university": "МГТУ им. Н.Э. Баумана",
+        "code": "09.03.03",
+        "title": "Прикладная информатика",
+        "profile": "Информационная аналитика",
+        "description": "Прикладная информатика — информационная аналитика. Сбор, обработка и анализ данных, BI-системы, визуализация данных, аналитика для принятия управленческих решений. На стыке IT и гуманитарных наук. Источник: bmstu.ru",
+        "ege": [
+            "russian",
+            "math",
+            "informatics",
+            "physics"
+        ],
+        "egeCount": 4,
+        "requiredEge": [
+            "russian",
+            "math"
+        ],
+        "optionalEge": [
+            "informatics",
+            "physics"
+        ],
+        "minScore": 280,
+        "budgetPlaces": 0,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "bmstu.ru, tabiturient.ru, msk.postupi.online"
+    },
+    {
+        "id": 92,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "01.03.01",
+        "title": "Математика",
+        "profile": "Фундаментальная математика",
+        "description": "Математика — фундаментальная математика в Высшей школе математики. Глубокая подготовка в алгебре, анализе, геометрии, топологии, теории чисел. Подготовка к научной карьере в математике и IT. Система Физтеха: базовые кафедры в институтах РАН. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 288,
+        "budgetPlaces": 16,
+        "direction": "math",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 93,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "01.03.02",
+        "title": "Прикладная математика и информатика",
+        "profile": "Прикладная математика и информатика",
+        "description": "Прикладная математика и информатика в Физтех-школе прикладной математики и информатики. Машинное обучение, анализ данных, компьютерное зрение, NLP, алгоритмы, программирование. Один из самых конкурентных направлений в России. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 303,
+        "budgetPlaces": 170,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 94,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "01.03.02",
+        "title": "Прикладная математика и информатика",
+        "profile": "Проектирование и разработка комплексных бизнес-приложений",
+        "description": "ПМИ — проектирование и разработка комплексных бизнес-приложений. Архитектура корпоративных систем, разработка ПО, базы данных, системный анализ. Подготовка IT-специалистов для крупных компаний. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 301,
+        "budgetPlaces": 10,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 95,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "03.03.01",
+        "title": "Прикладные математика и физика",
+        "profile": "Радиотехника и компьютерные технологии",
+        "description": "Прикладные математика и физика — радиотехника и компьютерные технологии в Физтех-школе радиотехники и компьютерных технологий. Радиоэлектроника, обработка сигналов, компьютерные технологии, радиолокация. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 292,
+        "budgetPlaces": 95,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 96,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "03.03.01",
+        "title": "Прикладные математика и физика",
+        "profile": "Общая и прикладная физика",
+        "description": "Прикладные математика и физика — общая и прикладная физика в Лаборатории физики инфокоммуникаций. Фундаментальная физика с выходом в оптику, лазерные технологии, фотонику, наноструктуры. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 291,
+        "budgetPlaces": 179,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 97,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "03.03.01",
+        "title": "Прикладные математика и физика",
+        "profile": "Физика перспективных технологий",
+        "description": "Прикладные математика и физика — физика перспективных технологий в Физтех-школе электроники, фотоники и молекулярной физики. Передовые технологии: нанофотоника, сверхпроводимость, квантовые технологии. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 286,
+        "budgetPlaces": 85,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 98,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "03.03.01",
+        "title": "Прикладные математика и физика",
+        "profile": "Биофизика и биоинформатика",
+        "description": "Прикладные математика и физика — биофизика и биоинформатика в Физтех-школе биологической и медицинской физики. Биоинформатика, молекулярное моделирование, геномика, нейробиология, медицинская физика. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 287,
+        "budgetPlaces": 50,
+        "direction": "science",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 99,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "09.03.01",
+        "title": "Информатика и вычислительная техника",
+        "profile": "Системное программирование и прикладная математика",
+        "description": "Информатика и вычислительная техника — системное программирование и прикладная математика. Языки программирования, компиляторы, операционные системы, верификация программ, распределённые системы. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": null,
+        "budgetPlaces": 33,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics",
+        "note": "Проходной балл по 400-балльной шкале: 391"
+    },
+    {
+        "id": 100,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "09.03.01",
+        "title": "Информатика и вычислительная техника",
+        "profile": "Естественные и компьютерные науки",
+        "description": "Информатика и вычислительная техника — естественные и компьютерные науки. На стыке IT и естественных наук: машинное обучение, анализ данных, биоинформатика, вычислительная физика. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 304,
+        "budgetPlaces": 74,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 101,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "09.03.04",
+        "title": "Программная инженерия",
+        "profile": "Программная инженерия",
+        "description": "Программная инженерия в Высшей школе программной инженерии. Полный цикл разработки ПО: проектирование, архитектура, тестирование, DevOps, управление командой. Подготовка software engineers для ведущих IT-компаний. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 299,
+        "budgetPlaces": 63,
+        "direction": "it",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 102,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "11.03.04",
+        "title": "Электроника и наноэлектроника",
+        "profile": "Электроника и наноэлектроника",
+        "description": "Электроника и наноэлектроника в Физтех-школе электроники, фотоники и молекулярной физики. Полупроводниковая электроника, наноструктуры, фотоника, СВЧ-электроника. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 282,
+        "budgetPlaces": 35,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 103,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "16.03.01",
+        "title": "Техническая физика",
+        "profile": "Техническая физика",
+        "description": "Техническая физика в Физтех-школе аэрокосмических и геокосмических наук. Теплофизика, физика плазмы, физика горения, ядерная физика, энергетические установки. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 291,
+        "budgetPlaces": 15,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    },
+    {
+        "id": 104,
+        "city": "Москва/Долгопрудный",
+        "university": "МФТИ",
+        "code": "19.03.01",
+        "title": "Биотехнология",
+        "profile": "Биотехнология",
+        "description": "Биотехнология в Физтех-школе биологической и медицинской физики. Биоинженерия, генная инженерия, биокатализ, технология биопрепаратов. На стыке физики, химии и биологии. Источник: pk.mipt.ru",
+        "ege": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "egeCount": 3,
+        "requiredEge": [
+            "russian",
+            "math",
+            "physics"
+        ],
+        "optionalEge": [],
+        "minScore": 281,
+        "budgetPlaces": 50,
+        "direction": "engineering",
+        "form": "fulltime",
+        "source": "pk.mipt.ru/bachelor/statistics/2025_statistics"
+    }
+]

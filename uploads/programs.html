@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Помощник Абитуриента — Выбор программы</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/programs.css">
+</head>
+<body>
+
+  <header id="header-placeholder"></header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Выбор программы обучения</h1>
+      <p>Отметьте предметы ЕГЭ, введите баллы и найдите подходящие специальности.</p>
+    </section>
+
+    <section class="filters-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Поиск по названию или коду специальности...">
+      </div>
+
+      <div class="filters-container">
+        <details class="subjects-dropdown">
+          <summary class="subjects-summary">
+            <span class="summary-title">Предметы ЕГЭ</span>
+            <span class="selected-badge" id="selected-badge">Ничего не выбрано</span>
+          </summary>
+
+          <div class="checkbox-grid" id="subjects-checkboxes">
+            <label class="checkbox-btn">
+              <input type="checkbox" value="rus">
+              <span>Русский язык</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="math">
+              <span>Профильная математика</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="cs">
+              <span>Информатика и ИКТ</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="physics">
+              <span>Физика</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="chem">
+              <span>Химия</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="bio">
+              <span>Биология</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="soc">
+              <span>Обществознание</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="history">
+              <span>История</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="foreign">
+              <span>Иностранный язык</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="literature">
+              <span>Литература</span>
+            </label>
+            <label class="checkbox-btn">
+              <input type="checkbox" value="geo">
+              <span>География</span>
+            </label>
+          </div>
+        </details>
+
+        <div class="filters-grid">
+          <select id="direction-filter">
+            <option value="">Все направления</option>
+            <option value="it">Информационные технологии</option>
+            <option value="engineering">Инженерия и физика</option>
+            <option value="science">Естественные науки</option>
+            <option value="eco">Экономика и управление</option>
+            <option value="hum">Гуманитарные науки</option>
+          </select>
+
+          <input type="number" id="score-filter" placeholder="Ваш суммарный балл ЕГЭ">
+        </div>
+      </div>
+    </section>
+
+    <section class="programs-list">
+      <p class="loading" style="text-align: center; color: var(--text-muted); padding: 32px 0; width: 100%;">Загрузка специальностей...</p>
+    </section>
+
+    <!-- Модальное окно с подробной информацией -->
+    <div class="modal-overlay" id="program-modal">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Закрыть">&times;</button>
+        <div class="modal-header">
+          <span class="program-code" id="modal-code"></span>
+          <h2 id="modal-title"></h2>
+        </div>
+        <div class="modal-tags">
+          <span class="modal-tag" id="modal-city"></span>
+          <span class="modal-tag" id="modal-score"></span>
+          <span class="modal-tag" id="modal-places"></span>
+        </div>
+        <div class="modal-body">
+          <p class="modal-short-desc" id="modal-description"></p>
+          <hr class="modal-divider">
+          <h3>Подробная информация</h3>
+          <div class="fulldesc-text" id="modal-fulldescribe"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Помощник Абитуриента. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
