@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduMatch — Умный навигатор поступления в вузы 2027</title>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('edumatch_theme') || localStorage.getItem('theme');
+        if (!t) {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch(e) {}
+    })();
+  </script>
 
   <!-- Шрифты Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

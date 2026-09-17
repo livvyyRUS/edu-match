@@ -81,13 +81,28 @@ window.getProgramsData = async function() {
 };
 
 /**
- * Theme Manager
+ * Theme Manager — unified with assistant.html
+ * Reads edumatch_theme OR theme, falls back to prefers-color-scheme, persists immediately
  */
 (function initTheme() {
-  const savedTheme = localStorage.getItem('edumatch_theme') ||
-    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  function getPreferredTheme() {
+    try {
+      return (
+        localStorage.getItem('edumatch_theme') ||
+        localStorage.getItem('theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      );
+    } catch {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+  }
 
+  const savedTheme = getPreferredTheme();
   document.documentElement.setAttribute('data-theme', savedTheme);
+  try {
+    localStorage.setItem('edumatch_theme', savedTheme);
+    localStorage.setItem('theme', savedTheme);
+  } catch {}
 
   document.addEventListener('DOMContentLoaded', () => {
     const toggleBtns = document.querySelectorAll('#themeToggle, .theme-btn');
@@ -96,7 +111,10 @@ window.getProgramsData = async function() {
         const current = document.documentElement.getAttribute('data-theme') || 'light';
         const next = current === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('edumatch_theme', next);
+        try {
+          localStorage.setItem('edumatch_theme', next);
+          localStorage.setItem('theme', next);
+        } catch {}
       });
     });
 
