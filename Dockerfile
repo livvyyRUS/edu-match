@@ -46,7 +46,7 @@ PY
 
 # ---------- Код приложения ----------
 COPY main.py universities_programs.json ./
-COPY *.html ./
+COPY html ./html
 COPY css ./css
 COPY js ./js
 COPY uploads ./uploads
