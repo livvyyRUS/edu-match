@@ -200,28 +200,18 @@ class Matcher:
 
     @staticmethod
     def _ege_scores(user_ege: dict[str, int], program: Program) -> float:
-        """
-        Качество баллов относительно порога программы.
-        Если minScore задан — считаем запас: 0.5 на пороге, растёт до ~1.0 при +60 баллов.
-        Иначе — нормализуем средний балл релевантных предметов.
-        """
-        relevant = [s for s in program.ege if s in user_ege]
-        if not relevant:
+        """Близость баллов пользователя к проходному порогу."""
+        if not any(subject in user_ege for subject in program.ege):
             return 0.0
-        avg_rel = sum(user_ege[s] for s in relevant) / len(relevant)
 
-        if program.minScore:
-            # учитываем сумму только по тем предметам, что пойдут в конкурс (required + optional),
-            # но у нас нет весов, поэтому сравним средний балл с "типичным порогом"
-            # minScore обычно = сумма 3 предметов; приблизительно threshold_avg = minScore / egeCount
-            n = max(program.egeCount, 1)
-            thr_avg = program.minScore / n
-            delta = avg_rel - thr_avg
-            # delta = -20 -> 0.2 ; delta = 0 -> 0.5 ; delta = +20 -> 0.8 ; delta = +40 -> 1.0
-            return float(np.clip(0.5 + delta / 50.0, 0.0, 1.0))
+        if program.minScore is None or program.minScore <= 0:
+            return 0.0  # Нет данных для оценки близости.
 
-        # нет порога — просто нормализованный средний балл по 100-балльной шкале
-        return float(np.clip((avg_rel - 40) / 60.0, 0.0, 1.0))
+        user_total = Matcher._user_total_for(program, user_ege)
+        margin = user_total - program.minScore
+
+        # Максимум на пороге; большой запас не даёт преимущества.
+        return float(np.exp(-abs(margin) / 20.0))
 
     @staticmethod
     def _user_total_for(program: Program, user_ege: dict[str, int]) -> int:
@@ -322,8 +312,6 @@ class Matcher:
                 # мягкий штраф за недобор (не отсекаем жёстко — юзер сам решит)
                 if margin < 0:
                     total *= max(0.35, 1.0 + margin / 100.0)
-                else:
-                    total *= min(1.15, 1.0 + margin / 400.0)  # лёгкий бонус за запас
 
             # фильтр по среднему баллу, если задан
             if (

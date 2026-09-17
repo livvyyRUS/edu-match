@@ -365,12 +365,19 @@
       });
     });
 
-    // Sort: High chance first, then by highest diff
+    // Сначала направления с проходным баллом, ближайшим к баллу пользователя.
     matched.sort((a, b) => {
-      const order = { high: 1, mid: 2, low: 3 };
-      if (order[a.chanceCategory] !== order[b.chanceCategory]) {
-        return order[a.chanceCategory] - order[b.chanceCategory];
-      }
+      const aHasScore = Number.isFinite(a.minScore) && a.minScore > 0;
+      const bHasScore = Number.isFinite(b.minScore) && b.minScore > 0;
+
+      // Без известного проходного балла близость оценить нельзя.
+      if (aHasScore !== bHasScore) return aHasScore ? -1 : 1;
+      if (!aHasScore) return 0;
+
+      const distance = Math.abs(a.diff) - Math.abs(b.diff);
+      if (distance !== 0) return distance;
+
+      // При одинаковом расстоянии предпочитаем вариант без недобора.
       return b.diff - a.diff;
     });
 
