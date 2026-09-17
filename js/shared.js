@@ -81,7 +81,7 @@ window.getProgramsData = async function() {
 };
 
 /**
- * Theme Manager — unified with assistant.html
+ * Theme Manager — unified with assistant
  * Reads edumatch_theme OR theme, falls back to prefers-color-scheme, persists immediately
  */
 (function initTheme() {

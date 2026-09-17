@@ -640,7 +640,7 @@
         <li><strong>Олимпиады РСОШ (I, II, III уровней):</strong> требуют подтверждения результатом ЕГЭ не менее 75 баллов по профильному предмету.</li>
         <li><strong>Важное правило:</strong> право БВИ можно использовать <em>только в один университет</em> на одно направление. В остальные 4 вуза подаются документы по общему конкурсу.</li>
       </ul>
-      Подробнее смотрите в разделе <strong><a href="roadmap.html" style="color: var(--accent);">Roadmap → Олимпиадный трек</a></strong>.`;
+      Подробнее смотрите в разделе <strong><a href="/roadmap" style="color: var(--accent);">Roadmap → Олимпиадный трек</a></strong>.`;
     }
 
     // 5. IT / Artificial Intelligence / Data Science

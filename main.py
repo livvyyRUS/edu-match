@@ -4,8 +4,8 @@ from pathlib import Path
 from typing import Optional
 
 import numpy as np
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import FileResponse, Response, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from sentence_transformers import CrossEncoder, SentenceTransformer
@@ -370,13 +370,6 @@ def health() -> dict:
     return {"status": "ok", "programs": len(matcher.programs) if matcher else 0}
 
 
-@app.get("/programs", response_model=list[Program])
-def list_programs() -> list[Program]:
-    if matcher is None:
-        raise HTTPException(503, "Matcher is not ready")
-    return matcher.programs
-
-
 @app.get("/match", response_model=list[MatchResult])
 def match(
     ege: Optional[str] = Query(None, description="math:92,russian:88,..."),
@@ -423,46 +416,210 @@ def match(
     )
 
 
-# ---------- Статика и HTML-страницы ----------
+# ---------- Статика и HTML-страницы (чистые URL без .html) ----------
 
-# Монтируем подпапки со статикой, если они существуют
-for _sub in ("css", "js", "uploads"):
+def _rewrite_links(content: str) -> str:
+    """
+    Переписывает старые ссылки вида *.html на чистые URL без расширения,
+    чтобы в адресной строке не было видно index.html / assistant.html и т.п.,
+    и чтобы логотип вёл на / вместо index.html.
+    Работает без редактирования файлов на диске — подмена на лету.
+    """
+    # Точные замены для href/action — покрывают все шаблоны из html/
+    replacements = [
+        # index -> /
+        ('href="index.html"', 'href="/"'),
+        ("href='index.html'", "href='/'"),
+        ('href="./index.html"', 'href="/"'),
+        ("href='./index.html'", "href='/'"),
+        ('href="/index.html"', 'href="/"'),
+        ("href='/index.html'", "href='/'"),
+        ('href="html/index.html"', 'href="/"'),
+        # assistant
+        ('href="assistant.html"', 'href="/assistant"'),
+        ("href='assistant.html'", "href='/assistant'"),
+        ('href="./assistant.html"', 'href="/assistant"'),
+        ("href='./assistant.html'", "href='/assistant'"),
+        ('href="/assistant.html"', 'href="/assistant"'),
+        ("href='/assistant.html'", "href='/assistant'"),
+        # programs
+        ('href="programs.html"', 'href="/programs"'),
+        ("href='programs.html'", "href='/programs'"),
+        ('href="./programs.html"', 'href="/programs"'),
+        ("href='./programs.html'", "href='/programs'"),
+        ('href="/programs.html"', 'href="/programs"'),
+        ("href='/programs.html'", "href='/programs'"),
+        # roadmap
+        ('href="roadmap.html"', 'href="/roadmap"'),
+        ("href='roadmap.html'", "href='/roadmap'"),
+        ('href="./roadmap.html"', 'href="/roadmap"'),
+        ("href='./roadmap.html'", "href='/roadmap'"),
+        ('href="/roadmap.html"', 'href="/roadmap"'),
+        ("href='/roadmap.html'", "href='/roadmap'"),
+        # action для формы поиска
+        ('action="programs.html"', 'action="/programs"'),
+        ("action='programs.html'", "action='/programs'"),
+        ('action="./programs.html"', 'action="/programs"'),
+        ("action='/programs.html'", "action='/programs'"),
+        ('action="/programs.html"', 'action="/programs"'),
+        ('action="index.html"', 'action="/"'),
+        ('action="assistant.html"', 'action="/assistant"'),
+        ('action="roadmap.html"', 'action="/roadmap"'),
+    ]
+    for old, new in replacements:
+        content = content.replace(old, new)
+
+    # Дополнительно чистим JS-вставки типа <a href="roadmap.html"> внутри assistant.js
+    # (безопасно, т.к. в JS файлах такие строки — только ссылки)
+    content = content.replace('"assistant.html"', '"/assistant"')
+    content = content.replace("'assistant.html'", "'/assistant'")
+    content = content.replace('"programs.html"', '"/programs"')
+    content = content.replace("'programs.html'", "'/programs'")
+    content = content.replace('"roadmap.html"', '"/roadmap"')
+    content = content.replace("'roadmap.html'", "'/roadmap'")
+    content = content.replace('"index.html"', '"/"')
+    content = content.replace("'index.html'", "'/'")
+
+    return content
+
+
+def _html_response(name: str) -> Response:
+    """Отдать HTML-файл с переписанными ссылками на чистые URL."""
+    path = BASE_DIR / name
+    if not path.is_file():
+        raise HTTPException(404, f"{name} not found")
+    raw = path.read_text(encoding="utf-8")
+    cleaned = _rewrite_links(raw)
+    return Response(content=cleaned, media_type="text/html; charset=utf-8")
+
+
+def _js_response(file_path: str) -> Response:
+    """Отдать JS-файл с переписанными ссылками (если в JS есть .html)."""
+    base_js = BASE_DIR / "js"
+    # защита от path traversal
+    target = (base_js / file_path).resolve()
+    if not str(target).startswith(str(base_js.resolve())):
+        raise HTTPException(403, "Forbidden")
+    if not target.is_file():
+        raise HTTPException(404, f"{file_path} not found")
+    raw = target.read_text(encoding="utf-8")
+    cleaned = _rewrite_links(raw)
+    return Response(content=cleaned, media_type="application/javascript; charset=utf-8")
+
+
+# --- API для JSON-программ (новый каноничный путь) ---
+@app.get("/api/programs", response_model=list[Program], tags=["api"])
+def list_programs_api() -> list[Program]:
+    if matcher is None:
+        raise HTTPException(503, "Matcher is not ready")
+    return matcher.programs
+
+
+# --- Чистые HTML-маршруты ---
+@app.get("/", include_in_schema=False)
+def index():
+    return _html_response("html/index.html")
+
+
+@app.get("/assistant", include_in_schema=False)
+def assistant_page_clean():
+    return _html_response("html/assistant.html")
+
+
+@app.get("/roadmap", include_in_schema=False)
+def roadmap_page_clean():
+    return _html_response("html/roadmap.html")
+
+
+@app.get("/programs", include_in_schema=False)
+def programs_page_or_api(request: Request):
+    """
+    /programs — теперь отдаёт HTML-страницу каталога для браузеров,
+    но сохраняет обратную совместимость: если клиент просит JSON
+    (Accept: application/json), возвращаем JSON как раньше.
+    """
+    accept = request.headers.get("accept", "")
+    # Если явно просят JSON (API-клиенты, curl с Accept: application/json, Swagger)
+    if "application/json" in accept and "text/html" not in accept:
+        if matcher is None:
+            raise HTTPException(503, "Matcher is not ready")
+        return JSONResponse(content=[p.model_dump() for p in matcher.programs])
+    # По умолчанию — HTML с чистыми ссылками
+    return _html_response("html/programs.html")
+
+
+# Для обратной совместимости старый /programs API тоже работает,
+# когда запрашивается через /api/programs выше, а /programs с JSON Accept
+# уже покрыт. Дублирующий маршрут для /programs как API оставляем
+# под другим именем функции, чтобы не конфликтовать с HTML.
+@app.get("/programs.json", include_in_schema=False)
+def programs_json_alias():
+    if matcher is None:
+        raise HTTPException(503, "Matcher is not ready")
+    return JSONResponse(content=[p.model_dump() for p in matcher.programs])
+
+
+# --- JS с очисткой ссылок (должен быть ДО монтирования StaticFiles) ---
+@app.get("/js/{file_path:path}", include_in_schema=False)
+def serve_js_clean(file_path: str):
+    return _js_response(file_path)
+
+
+# --- Редиректы со старых .html URL на чистые ---
+@app.get("/index.html", include_in_schema=False)
+def redirect_index_html():
+    return RedirectResponse(url="/", status_code=301)
+
+
+@app.get("/index", include_in_schema=False)
+def redirect_index():
+    return RedirectResponse(url="/", status_code=301)
+
+
+@app.get("/assistant.html", include_in_schema=False)
+def redirect_assistant_html():
+    return RedirectResponse(url="/assistant", status_code=301)
+
+
+@app.get("/assistant/", include_in_schema=False)
+def redirect_assistant_slash():
+    return RedirectResponse(url="/assistant", status_code=301)
+
+
+@app.get("/programs.html", include_in_schema=False)
+def redirect_programs_html():
+    return RedirectResponse(url="/programs", status_code=301)
+
+
+@app.get("/programs/", include_in_schema=False)
+def redirect_programs_slash():
+    return RedirectResponse(url="/programs", status_code=301)
+
+
+@app.get("/roadmap.html", include_in_schema=False)
+def redirect_roadmap_html():
+    return RedirectResponse(url="/roadmap", status_code=301)
+
+
+@app.get("/roadmap/", include_in_schema=False)
+def redirect_roadmap_slash():
+    return RedirectResponse(url="/roadmap", status_code=301)
+
+
+# --- Статика (css, uploads) — js уже обслуживается выше с очисткой ---
+for _sub in ("css", "uploads"):
     _p = BASE_DIR / _sub
     if _p.is_dir():
         app.mount(f"/{_sub}", StaticFiles(directory=_p), name=_sub)
 
-
-def _html(name: str) -> FileResponse:
-    """Отдать HTML-файл из рабочей директории или 404."""
-    path = BASE_DIR / name
-    if not path.is_file():
-        raise HTTPException(404, f"{name} not found")
-    return FileResponse(path, media_type="text/html")
-
-
-@app.get("/", include_in_schema=False)
-def index():
-    return _html("html/index.html")
-
-
-@app.get("/index.html", include_in_schema=False)
-def index_html():
-    return _html("html/index.html")
-
-
-@app.get("/assistant.html", include_in_schema=False)
-def assistant_page():
-    return _html("html/assistant.html")
-
-
-@app.get("/programs.html", include_in_schema=False)
-def programs_page():
-    return _html("html/programs.html")
-
-
-@app.get("/roadmap.html", include_in_schema=False)
-def roadmap_page():
-    return _html("html/roadmap.html")
+# Если папка js существует, но мы уже перехватили /js/* маршрутом,
+# всё равно монтируем как fallback (на случай бинарных файлов),
+# но основной путь уже чистый.
+_js_dir = BASE_DIR / "js"
+if _js_dir.is_dir():
+    # Монтируем под другим именем, чтобы не конфликтовать, но оставим
+    # и оригинальный mount как fallback — FastAPI проверит маршруты раньше.
+    app.mount("/js", StaticFiles(directory=_js_dir), name="js_fallback")
 
 
 @app.get("/universities_programs.json", include_in_schema=False)
