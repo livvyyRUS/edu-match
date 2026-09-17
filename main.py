@@ -475,3 +475,8 @@ def programs_page():
 @app.get("/roadmap.html", include_in_schema=False)
 def roadmap_page():
     return _html("html/roadmap.html")
+
+
+@app.get("/universities_programs.json", include_in_schema=False)
+def serve_programs_json():
+    return FileResponse(BASE_DIR / "universities_programs.json")
